@@ -1,0 +1,176 @@
+{
+  "status": "success",
+  "data": {
+    "updated": "Tue, 16 Jan 2024 11:04:00 +0100",
+    "parkingupdates": [
+      {
+        "id": 1,
+        "total": 39,
+        "current": 23,
+        "trend": "increasing",
+        "status": "available",
+        "parkinglocation": 1
+      },
+      {
+        "id": 2,
+        "total": 528,
+        "current": 396,
+        "trend": "constant",
+        "status": "available",
+        "parkinglocation": 2
+      },
+      {
+        "id": 4,
+        "total": 140,
+        "current": 140,
+        "trend": "constant",
+        "status": "occupied",
+        "parkinglocation": 4
+      },
+      {
+        "id": 5,
+        "total": 440,
+        "current": 108,
+        "trend": "constant",
+        "status": "available",
+        "parkinglocation": 5
+      },
+      {
+        "id": 6,
+        "total": 129,
+        "current": 79,
+        "trend": "increasing",
+        "status": "available",
+        "parkinglocation": 6
+      },
+      {
+        "id": 7,
+        "total": 185,
+        "current": 31,
+        "trend": "constant",
+        "status": "available",
+        "parkinglocation": 7
+      },
+      {
+        "id": 8,
+        "total": 486,
+        "current": 163,
+        "trend": "constant",
+        "status": "available",
+        "parkinglocation": 8
+      },
+      {
+        "id": 9,
+        "total": 300,
+        "current": 75,
+        "trend": "decreasing",
+        "status": "available",
+        "parkinglocation": 9
+      },
+      {
+        "id": 10,
+        "total": 210,
+        "current": 142,
+        "trend": "constant",
+        "status": "available",
+        "parkinglocation": 10
+      },
+      {
+        "id": 11,
+        "total": 166,
+        "current": 89,
+        "trend": "increasing",
+        "status": "available",
+        "parkinglocation": 11
+      },
+      {
+        "id": 12,
+        "total": 97,
+        "current": 56,
+        "trend": "constant",
+        "status": "available",
+        "parkinglocation": 12
+      },
+      {
+        "id": 13,
+        "total": 150,
+        "current": 37,
+        "trend": "constant",
+        "status": "available",
+        "parkinglocation": 13
+      },
+      {
+        "id": 14,
+        "total": 279,
+        "current": 100,
+        "trend": "constant",
+        "status": "available",
+        "parkinglocation": 14
+      },
+      {
+        "id": 15,
+        "total": 190,
+        "current": 190,
+        "trend": "constant",
+        "status": "occupied",
+        "parkinglocation": 15
+      },
+      {
+        "id": 16,
+        "total": 131,
+        "current": 43,
+        "trend": "increasing",
+        "status": "available",
+        "parkinglocation": 16
+      },
+      {
+        "id": 17,
+        "total": 113,
+        "current": 24,
+        "trend": "constant",
+        "status": "available",
+        "parkinglocation": 17
+      },
+      {
+        "id": 18,
+        "total": 34,
+        "current": 34,
+        "trend": "constant",
+        "status": "occupied",
+        "parkinglocation": 18
+      },
+      {
+        "id": 19,
+        "total": 80,
+        "current": 51,
+        "trend": "increasing",
+        "status": "available",
+        "parkinglocation": 19
+      },
+      {
+        "id": 20,
+        "total": 160,
+        "current": 105,
+        "trend": "increasing",
+        "status": "available",
+        "parkinglocation": 26
+      },
+      {
+        "id": 22,
+        "total": 1,
+        "current": 0,
+        "trend": "constant",
+        "status": "none",
+        "parkinglocation": 20
+      },
+      {
+        "id": 21,
+        "total": 55,
+        "current": 0,
+        "trend": "constant",
+        "status": "available",
+        "parkinglocation": 27
+      }
+    ]
+  }
+}
