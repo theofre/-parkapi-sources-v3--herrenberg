@@ -15,7 +15,7 @@ class BfrkBikePushConverter(BfrkBasePushConverter):
     bfrk_row_validator = DataclassValidator(BfrkBikeRowInput)
 
     source_info = SourceInfo(
-        uid='bfrk_car',
+        uid='bfrk_bike',
         name='Barrierefreie Reisekette: Fahrrad-Parkplätze am Bahnhof',
         public_url='https://www.mobidata-bw.de/dataset/bfrk-barrierefreiheit-an-bw-bahnhoefen',
         has_realtime_data=False,
