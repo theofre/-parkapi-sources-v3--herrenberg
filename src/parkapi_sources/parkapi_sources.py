@@ -20,7 +20,7 @@ from .converters import (
 )
 from .converters.base_converter.pull import PullConverter
 from .converters.base_converter.push import PushConverter
-from .converters.bfrk import BfrkCarPushConverter, BfrkBikePushConverter
+from .converters.bfrk import BfrkBikePushConverter, BfrkCarPushConverter
 from .exceptions import MissingConfigException, MissingConverterException
 from .util import ConfigHelper
 
