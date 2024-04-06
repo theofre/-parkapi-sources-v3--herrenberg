@@ -5,12 +5,15 @@ Use of this source code is governed by an MIT-style license that can be found in
 
 from .bahn_v2 import BahnV2PullConverter
 from .base_converter import BaseConverter
+from .bfrk_bw import BfrkBwOepnvBikePushConverter, BfrkBwOepnvCarPushConverter, BfrkBwSpnvBikePushConverter, BfrkBwSpnvCarPushConverter
 from .freiburg import FreiburgPullConverter
 from .heidelberg import HeidelbergPullConverter
 from .karlsruhe import KarlsruhePullConverter
 from .mannheim import MannheimPullConverter
 from .neckarsulm import NeckarsulmPushConverter
 from .pbw import PbwPullConverter
+from .pforzheim import PforzheimPushConverter
+from .reutlingen import ReutlingenPushConverter
 from .stuttgart import StuttgartPushConverter
 from .ulm import UlmPullConverter
 from .vrs_p_r import VrsParkAndRidePushConverter

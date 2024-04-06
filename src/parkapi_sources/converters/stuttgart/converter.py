@@ -17,7 +17,7 @@ class StuttgartPushConverter(XmlConverter):
 
     source_info = SourceInfo(
         uid='stuttgart',
-        name='Stuttgart',
+        name='Stadt Stuttgart',
         public_url='https://service.mdm-portal.de/mdm-portal-application/publDetail.do?publicationId=3059002',
         attribution_contributor='Landeshauptstadt Stuttgart, Tiefbauamt',
         attribution_license='dl-de/by-2-0',

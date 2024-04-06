@@ -8,6 +8,10 @@ from typing import Optional, Type
 from .converters import (
     BahnV2PullConverter,
     BaseConverter,
+    BfrkBwOepnvBikePushConverter,
+    BfrkBwOepnvCarPushConverter,
+    BfrkBwSpnvBikePushConverter,
+    BfrkBwSpnvCarPushConverter,
     FreiburgPullConverter,
     HeidelbergPullConverter,
     KarlsruhePullConverter,
@@ -20,7 +24,6 @@ from .converters import (
 )
 from .converters.base_converter.pull import PullConverter
 from .converters.base_converter.push import PushConverter
-from .converters.bfrk import BfrkBikePushConverter, BfrkCarPushConverter
 from .exceptions import MissingConfigException, MissingConverterException
 from .util import ConfigHelper
 
@@ -28,8 +31,10 @@ from .util import ConfigHelper
 class ParkAPISources:
     converter_classes: list[Type[BaseConverter]] = [
         BahnV2PullConverter,
-        BfrkBikePushConverter,
-        BfrkCarPushConverter,
+        BfrkBwOepnvBikePushConverter,
+        BfrkBwOepnvCarPushConverter,
+        BfrkBwSpnvBikePushConverter,
+        BfrkBwSpnvCarPushConverter,
         FreiburgPullConverter,
         HeidelbergPullConverter,
         KarlsruhePullConverter,

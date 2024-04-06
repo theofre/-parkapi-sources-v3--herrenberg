@@ -16,7 +16,7 @@ from parkapi_sources.models import RealtimeParkingSiteInput, SourceInfo, StaticP
 class MannheimPullConverter(PullConverter, StaticGeojsonDataMixin, PullScraperMixin):
     source_info = SourceInfo(
         uid='mannheim',
-        name='Mannheim',
+        name='Stadt Mannheim',
         public_url='https://www.parken-mannheim.de',
         timezone='Europe/Berlin',
         attribution_contributor='Mannheimer Parkhausbetriebe GmbH',

@@ -3,6 +3,8 @@ Copyright 2024 binary butterfly GmbH
 Use of this source code is governed by an MIT-style license that can be found in the LICENSE.txt.
 """
 
+from abc import ABC
+
 from validataclass.validators import DataclassValidator
 
 from parkapi_sources.models import SourceInfo
@@ -11,15 +13,8 @@ from .base_converter import BfrkBasePushConverter
 from .car_models import BfrkCarRowInput
 
 
-class BfrkCarPushConverter(BfrkBasePushConverter):
+class BfrkBwCarPushConverter(BfrkBasePushConverter, ABC):
     bfrk_row_validator = DataclassValidator(BfrkCarRowInput)
-
-    source_info = SourceInfo(
-        uid='bfrk_car',
-        name='Barrierefreie Reisekette: PKW-Parkplätze am Bahnhof',
-        public_url='https://www.mobidata-bw.de/dataset/bfrk-barrierefreiheit-an-bw-bahnhoefen',
-        has_realtime_data=False,
-    )
 
     header_mapping: dict[str, str] = {
         'ID': 'uid',
@@ -34,3 +29,21 @@ class BfrkCarPushConverter(BfrkBasePushConverter):
         'OSM_ID': 'identifier_osm',
         'Parkplatz_Foto': 'photo_url',
     }
+
+
+class BfrkBwOepnvCarPushConverter(BfrkBwCarPushConverter):
+    source_info = SourceInfo(
+        uid='bfrk_bw_oepnv_car',
+        name='Barrierefreie Reisekette Baden-Württemberg: PKW-Parkplätze an Bushaltestellen',
+        public_url='https://www.mobidata-bw.de/dataset/bfrk-barrierefreiheit-an-bw-haltestellen',
+        has_realtime_data=False,
+    )
+
+
+class BfrkBwSpnvCarPushConverter(BfrkBwCarPushConverter):
+    source_info = SourceInfo(
+        uid='bfrk_bw_spnv_car',
+        name='Barrierefreie Reisekette Baden-Württemberg: PKW-Parkplätze an Bahnhöfen',
+        public_url='https://www.mobidata-bw.de/dataset/bfrk-barrierefreiheit-an-bw-bahnhoefen',
+        has_realtime_data=False,
+    )

@@ -19,7 +19,7 @@ class HeidelbergPullConverter(PullConverter, StaticGeojsonDataMixin):
     heidelberg_realtime_update_validator = DataclassValidator(HeidelbergRealtimeUpdateInput)
     source_info = SourceInfo(
         uid='heidelberg',
-        name='Heidelberg',
+        name='Stadt Heidelberg',
         public_url='https://parken.heidelberg.de',
         source_url='https://parken.heidelberg.de/v1',
         timezone='Europe/Berlin',

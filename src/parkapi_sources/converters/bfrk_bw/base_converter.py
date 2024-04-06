@@ -9,9 +9,10 @@ from validataclass.exceptions import ValidationError
 from validataclass.validators import DataclassValidator
 
 from parkapi_sources.converters.base_converter.push import CsvConverter
-from parkapi_sources.converters.bfrk.base_models import BfrkBaseRowInput
 from parkapi_sources.exceptions import ImportParkingSiteException
 from parkapi_sources.models import StaticParkingSiteInput
+
+from .base_models import BfrkBaseRowInput
 
 
 class BfrkBasePushConverter(CsvConverter, ABC):
