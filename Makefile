@@ -20,4 +20,4 @@ black:
 
 .PHONY: ruff
 ruff:
-	ruff --fix ./src ./tests
+	ruff check --fix ./src ./tests

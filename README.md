@@ -1,3 +1,215 @@
 # ParkAPI Sources
 
-ParkAPI Sources is a collection of converters from several different data sources to normalized ParkAPI data.
+ParkAPI Sources is a collection of converters from several different data sources to normalized ParkAPI data. ParkAPI does support parking
+for cars, for bikes and lockers. The data model is based on the original ParkAPI project and tries to stay compatible to DATEX II Parking
+Publication Light at any extension of the model.
+
+We support following data sources:
+
+| name                                                                              | purpose | type        | uid                  | realtime |
+|-----------------------------------------------------------------------------------|---------|-------------|----------------------|----------|
+| Deutsche Bahn                                                                     | car     | pull        | `bahn_v2`            | no       |
+| Barrierefreie Reisekette Baden-Württemberg: PKW-Parkplätze an Bahnhöfen           | car     | push (csv)  | `bfrk_bw_oepnv_car`  | no       |
+| Barrierefreie Reisekette Baden-Württemberg: PKW-Parkplätze an Bushaltestellen     | car     | push (csv)  | `bfrk_bw_spnv_car`   | no       |
+| Barrierefreie Reisekette Baden-Württemberg: Fahrrad-Parkplätze an Bahnhöfen       | bike    | push (csv)  | `bfrk_bw_oepnv_bike` | no       |
+| Barrierefreie Reisekette Baden-Württemberg: Fahrrad-Parkplätze an Bushaltestellen | car     | push (csv)  | `bfrk_bw_spnv_bike`  | no       |
+| Stadt Freiburg                                                                    | car     | pull        | `freiburg`           | yes      |
+| Stadt Heidelberg                                                                  | car     | pull        | `heidelberg`         | yes      |
+| Stadt Karlsruhe                                                                   | car     | pull        | `karlsruhe`          | yes      |
+| Stadt Neckarsulm                                                                  | car     | push (csv)  | `neckarsulm`         | no       |
+| Parkraumgesellschaft Baden-Württemberg                                            | car     | pull        | `pbw`                | yes      |
+| Stadt Pforzheim                                                                   | car     | push (csv)  | `pforzheim`          | no       |
+| Stadt Reutlingen                                                                  | car     | push (csv)  | `reutlingen`         | no       |
+| Stadt Stuttgart                                                                   | car     | push (json) | `stuttgart`          | yes      |
+| Stadt Ulm                                                                         | car     | pull        | `ulm`                | yes      |
+| Verband Region Stuttgart: Park and Ride                                           | car     | pull        | `vrs_p_r`            | yes      |
+
+New converters for new sources are always welcome, please have a look at "Contribute" below.
+
+
+## Install
+
+ParkAPI Sources is a python module published at [PyPI](https://pypi.org/project/parkapi-sources/). Therefore, you can install it by 
+
+```shell
+pip install parkapi-sources
+```
+
+If you use parkapi-sources in a project, we recommend to fix the version. As long as parkapi-sources is beta, breaking changes might be
+introduced on minor version level (like: change from 0.1.1 to 0.2.0). As soon as 1.0 is released, we will follow 
+[Semantic Versioning](https://semver.org), which means that breaking changes will just appear on major version changes (like: change from 1.1.2 to 2.0.0). 
+You can expect a lot of changes in the minor version level, as any new converter is a new feature.
+
+
+## Usage
+
+Your starting point is always the `ParkAPISources` where all Sources are registered.
+
+```python
+from parkapi_sources import ParkAPISources
+
+my_sources = ParkAPISources()
+```
+
+`ParkAPISources` accepts following parameters:
+
+- `config: Optional[dict] = None` is a dictionary for config values, especially secrets.
+- `converter_uids: Optional[list[str]] = None` is used for loading just the converter uids you want to load
+- `no_pull_converter: bool = False` is used for limiting converters to pull converters
+- `no_push_converter: bool = False` is used for limiting converters to push converters
+
+
+### Configuration
+
+Config values are mostly individual for specific converters: if there are required config values, they are defined at the converter 
+definition right at the top:
+
+```
+required_config_keys = ['MY_SECRET']
+```
+
+`ParkAPISources` offers a method to check if all config values are set:
+
+```python
+from parkapi_sources import ParkAPISources
+
+my_sources = ParkAPISources()
+my_sources.check_credentials()
+```
+
+If not all config values are set, a `MissingConfigException` is thrown. It's recommended to run this check after initializing the module
+to prevent exceptions during runtime.
+
+Besides converter-individual config values, there are two global values which can be used to configure the source of GeoJSON files. Per
+default, static GeoJSON files are fetched from this repository. This behaviour can be changed:
+
+- `STATIC_GEOJSON_BASE_URL` defines another base URL for GeoJSON files
+- `STATIC_GEOJSON_BASE_PATH` defines a lokal path instead, so the application will load files locally without network requests
+
+
+### Use converters
+
+After initializing, you will find all initialized converters at `ParkAPISources.converter_by_uid`. As the input is very different, so are
+the methods you have to use. In general, you can differ between two major strategies:
+
+
+### Pull converters
+
+Pull converters are responsible for getting data from an external data source. This can be an REST endpoints as well as HTML which is
+scraped. Pull converters always split up in static and realtime data, because at most sources, this is not the same. Each pull converter
+has two methods:
+
+1) `get_static_parking_sites(self) -> tuple[list[StaticParkingSiteInput], list[ImportParkingSiteException]]:`
+2) `def get_realtime_parking_sites(self) -> tuple[list[RealtimeParkingSiteInput], list[ImportParkingSiteException]]:`
+
+
+### Push converters
+
+Push converters are responsible to handle data which is pushed to the service using defined endpoints. Usually, these converters are used
+as a handler behind HTTP endpoints, but of course you can use them in other ways, too, for example command line scripts.
+
+Push converters always handle specific formats, therefore, there are multiple types of push converters. All push converters return a 
+`tuple[list[StaticParkingSiteInput | RealtimeParkingSiteInput], list[ImportParkingSiteException]]`, therefore they decided based on the
+given data if it's static or realtime data they got - or even both, then each dataset ends up in two entries in the first list.
+
+1) A `CsvConverter` handles CSV files: `handle_csv_string(self, data: StringIO)`
+2) A `JsonConverter` handles JSON based data: `handle_json(self, data: dict | list)`
+3) A `XlsxConverter` handles XMLX data: `def handle_xlsx(self, workbook: Workbook)` parsed by `openpyxl`
+4) A `XmlConverter` handles XML data: `def handle_xml(self, root: Element)` parsed by `lxml`
+
+
+### Results
+
+At `webapp/models/parking_site_inputs.py`, you can find the definition of `StaticParkingSiteInput` and `RealtimeParkingSiteInput`. These
+`dataclasses` are also [`validataclasses`](https://pypi.org/project/validataclass/), so you can be sure that the data you get is validated.
+
+
+## Contribute
+
+We are happy about any contributions. We do not expect that yoy can develop Python, but of course things might speed up if 
+
+
+### Report bugs
+
+As ParkAPI-Sources integrates a lot of external data sources, sometimes without a proper definition, converters might run into issues
+because of changes on the data source side. If you see that happening, please add a bug report at the
+[issues](https://github.com/ParkenDD/parkapi-sources-v3/issues). If possible, please add the data which fails.
+
+
+### Contribute new source data
+
+If you see a nice data source which is not covered by ParkAPI-sources, you can always create a feature request at our
+[issues](https://github.com/ParkenDD/parkapi-sources-v3/issues). If you do so, please add the data you found, so we can actually build
+the converter. If possible, please try to find out a licence, too.
+
+
+### Write a new Converters
+
+We always welcome merge requests with new converters. A merge request should contain the following:
+
+* MIT licenced code
+* A converter which validates the input in a way that the output follows the data model
+* A test with example data to ensure that the converter works with current data
+
+
+## Write a new converter
+
+First you have to determine which type of converter you need. If you get the data from an endpoint, you will need a `PushConverter`, if
+you have a file you want to push via HTTP or CLI, you need a `PullConverter`.
+
+
+### Write the converter
+
+In order to write a converter, you need a directory at `converters`. Please name your directory in a way that it points to the actual
+converter you will write. If it's just one converter, the `uid` is usually the best approach.
+
+At `converters/your-converter`, you will at least need a `converter.py` and an `__init__.py`. In most cases, you will also need some
+`validataclasses` you can put in `models.py`. Validation is crucial in this library, because the users of this library should not think
+invalid data. Additionally, if you have very specific new data types, you can write new `validataclass` validators you can usually put in
+`validators.py`.
+
+
+### Testing the converter
+
+In order to proof that the validator works, we need to test the basic functionality. In order to do this, we need a snapshot of the data
+which should be integrated. Common place for this data is `tests/converters/data/filename-starting-with-uid.ending`. This data should be 
+used in one or multiple tests (in several cases two tests, one for static, one for realtime data) stored at `tests/converters/uid_test.py`.
+
+If you test a `PullConverter`, you will need no mock requests. This can be done using the fantastic
+[`requests_mock`](https://pypi.org/project/requests-mock/) library.
+
+If you created new validators, these should be tested with different inputs. Usually, `pytest.parametrize` is a nice approach to do this.
+
+
+### Linting
+
+As we try to keep a consistent code style, please lint your code before creating the merge request. We use `black` and `ruff` for linting.
+There is Makefile target to do both: `make lint`. It runs the following commands:
+
+```bash
+black ./src ./tests
+ruff check --fix ./src ./tests
+```
+
+If you don't have `black` and `ruff` installed globally, you can create a virtual environment for these tools:
+
+```bash
+virtualenv venv
+source venv/bin/activate
+pip install -r requirements.txt -r requirements-dev.txt
+
+black ./src ./tests
+ruff check --fix ./src ./tests
+```
+
+
+### Release process
+
+If you created a merge request, the maintainers will review your code. If everything is fine, it will be merged to `main`, and a new
+release will be created soon. As written above, we follow SemVer, so any new converter will add plus one to the minor version. In order to
+use this new release, please keep in mind to update your `requirements.txt` / update the dependency manager you use.
+
+
+## Licence
+
+This library is under MIT licence. Please look at `LICENCE.txt` for details.

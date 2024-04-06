@@ -16,7 +16,7 @@ from parkapi_sources.models import RealtimeParkingSiteInput, SourceInfo, StaticP
 class UlmPullConverter(PullConverter, StaticGeojsonDataMixin, PullScraperMixin):
     source_info = SourceInfo(
         uid='ulm',
-        name='Ulm',
+        name='Stadt Ulm',
         public_url='https://www.parken-in-ulm.de',
         timezone='Europe/Berlin',
         attribution_contributor='Ulmer Parkbetriebs-GmbH',

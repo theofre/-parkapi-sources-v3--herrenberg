@@ -18,7 +18,7 @@ class FreiburgPullConverter(PullConverter, StaticGeojsonDataMixin):
     freiburg_realtime_feature_validator = DataclassValidator(FreiburgFeatureInput)
     source_info = SourceInfo(
         uid='freiburg',
-        name='Freiburg',
+        name='Stadt Freiburg',
         public_url='https://www.freiburg.de/pb/,Lde/231355.html',
         source_url='https://geoportal.freiburg.de/wfs/gdm_pls/gdm_plslive?request=getfeature&service=wfs&version=1.1.0&typename=pls'
         '&outputformat=geojson&srsname=epsg:4326',
