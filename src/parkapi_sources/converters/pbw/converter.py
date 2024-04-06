@@ -30,7 +30,7 @@ class PbwPullConverter(PullConverter):
 
     source_info = SourceInfo(
         uid='pbw',
-        name='PBW',
+        name='Parkraumgesellschaft Baden-Württemberg',
         public_url='https://www.pbw.de',
         has_realtime_data=True,
     )
