@@ -16,7 +16,8 @@ We support following data sources:
 | Stadt Freiburg                                                                    | car     | pull        | `freiburg`           | yes      |
 | Stadt Heidelberg                                                                  | car     | pull        | `heidelberg`         | yes      |
 | Stadt Karlsruhe                                                                   | car     | pull        | `karlsruhe`          | yes      |
-| Stadt Neckarsulm                                                                  | car     | push (csv)  | `neckarsulm`         | no       |
+| Stadt Mannheim                                                                    | car     | pull        | `mannheim`           | yes      |
+| Stadt Karlsruhe                                                                   | car     | push (csv)  | `neckarsulm`         | no       |
 | Parkraumgesellschaft Baden-Württemberg                                            | car     | pull        | `pbw`                | yes      |
 | Stadt Pforzheim                                                                   | car     | push (csv)  | `pforzheim`          | no       |
 | Stadt Reutlingen                                                                  | car     | push (csv)  | `reutlingen`         | no       |
@@ -201,6 +202,12 @@ pip install -r requirements.txt -r requirements-dev.txt
 black ./src ./tests
 ruff check --fix ./src ./tests
 ```
+
+
+### Make your new converter available
+
+All available converters should be registered at the `ParkAPISources` class in order to make them accessible for users of this library, so 
+please register your converter there. The new converter should also be added to the table in this README.md file.
 
 
 ### Release process
