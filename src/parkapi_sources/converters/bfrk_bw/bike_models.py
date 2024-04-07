@@ -9,7 +9,7 @@ from typing import Optional
 from validataclass.dataclasses import validataclass
 from validataclass.validators import EnumValidator
 
-from parkapi_sources.models.enums import ParkingSiteType
+from parkapi_sources.models.enums import ParkingSiteType, PurposeType
 from parkapi_sources.models.parking_site_inputs import StaticParkingSiteInput
 from parkapi_sources.validators import ExcelNoneable, MappedBooleanValidator
 
@@ -51,5 +51,6 @@ class BfrkBikeRowInput(BfrkBaseRowInput):
         static_parking_site_input.has_roof = self.has_roof
         static_parking_site_input.has_fee = self.has_fee
         static_parking_site_input.has_lighting = self.has_lighting
+        static_parking_site_input.purpose = PurposeType.BIKE
 
         return static_parking_site_input
