@@ -11,6 +11,7 @@ from .heidelberg import HeidelbergPullConverter
 from .karlsruhe import KarlsruhePullConverter
 from .mannheim import MannheimPullConverter
 from .neckarsulm import NeckarsulmPushConverter
+from .pam_bw import PamBwPushConverter
 from .pbw import PbwPullConverter
 from .pforzheim import PforzheimPushConverter
 from .reutlingen import ReutlingenPushConverter
