@@ -15,6 +15,7 @@ from .validators import HeidelbergRealtimeInput, HeidelbergRealtimeUpdateInput
 
 
 class HeidelbergPullConverter(PullConverter, StaticGeojsonDataMixin):
+    required_config_keys = ['PARK_API_HEIDELBERG_API_KEY']
     heidelberg_realtime_validator = DataclassValidator(HeidelbergRealtimeInput)
     heidelberg_realtime_update_validator = DataclassValidator(HeidelbergRealtimeUpdateInput)
     source_info = SourceInfo(
