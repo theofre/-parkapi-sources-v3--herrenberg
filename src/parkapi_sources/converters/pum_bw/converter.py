@@ -9,20 +9,16 @@ from typing import Any
 from openpyxl.cell import Cell
 from openpyxl.workbook.workbook import Workbook
 from validataclass.exceptions import ValidationError
-from validataclass.validators import DataclassValidator
 
 from parkapi_sources.converters.base_converter.push import XlsxConverter
-from parkapi_sources.converters.neckarsulm.models import NeckarsulmRowInput
 from parkapi_sources.exceptions import ImportParkingSiteException
 from parkapi_sources.models import SourceInfo, StaticParkingSiteInput
 
 
-class PamBwPushConverter(XlsxConverter):
-    neckarsulm_row_validator = DataclassValidator(NeckarsulmRowInput)
-
+class PumBwPushConverter(XlsxConverter):
     source_info = SourceInfo(
-        uid='pam_bw',
-        name='Baden-Württemberg: Park und Mitfahren',
+        uid='pum_bw',
+        name='Baden-Württemberg: Parken und Mitfahren',
         public_url='https://mobidata-bw.de/dataset/p-m-parkplatze-baden-wurttemberg',
         has_realtime_data=False,
     )
