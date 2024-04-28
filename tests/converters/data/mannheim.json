@@ -1,0 +1,816 @@
+[
+  {
+    "id": "Hauptbahnhof_P5",
+    "name": "Hauptbahnhof P5",
+    "operatorId": "stadt_mannheim",
+    "dataType": "parkingCar",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.4689917,
+        49.4774787
+      ]
+    },
+    "address": {
+      "street": "Glücksteinallee",
+      "houseNo": "7a",
+      "postalCode": "68163",
+      "city": "Mannheim",
+      "state": "Baden-Württemberg",
+      "country": "Deutschland",
+      "countryCode": "de"
+    },
+    "networkId": "Mobidata",
+    "description": "Hauptbahnhof P5, Parkhaus",
+    "trafficType": "car",
+    "type": "carPark",
+    "properties": [
+      "carPark"
+    ],
+    "capacity": 584,
+    "free": 507,
+    "timestamp": "2023-12-04T11:11:00+01:00"
+  },
+  {
+    "id": "Klinikum_P3",
+    "name": "Klinikum P3",
+    "operatorId": "stadt_mannheim",
+    "dataType": "parkingCar",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.488045458680121,
+        49.49030287336665
+      ]
+    },
+    "address": {
+      "country": "Deutschland",
+      "countryCode": "de"
+    },
+    "networkId": "Mobidata",
+    "description": "Klinikum P3",
+    "trafficType": "car",
+    "type": "carPark",
+    "properties": [
+      "carPark"
+    ],
+    "capacity": 313,
+    "free": 0,
+    "timestamp": "2023-12-04T11:11:00+01:00"
+  },
+  {
+    "id": "Klinikum_Tiefgarage",
+    "name": "Klinikum, Tiefgarage",
+    "operatorId": "stadt_mannheim",
+    "dataType": "parkingCar",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.49004677650335,
+        49.49011495084236
+      ]
+    },
+    "address": {
+      "country": "Deutschland",
+      "countryCode": "de"
+    },
+    "networkId": "Mobidata",
+    "description": "Klinikum, Tiefgarage",
+    "trafficType": "car",
+    "type": "carPark",
+    "properties": [
+      "carPark"
+    ],
+    "capacity": 509,
+    "free": 22,
+    "timestamp": "2023-12-04T11:11:00+01:00"
+  },
+  {
+    "id": "PH46",
+    "name": "Wasserturm",
+    "operatorId": "stadt_mannheim",
+    "dataType": "parkingCar",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.475790046725884,
+        49.48444447052461
+      ]
+    },
+    "address": {
+      "country": "Deutschland",
+      "countryCode": "de"
+    },
+    "networkId": "Mobidata",
+    "description": "PH46 Wasserturm",
+    "trafficType": "car",
+    "type": "carPark",
+    "properties": [
+      "carPark"
+    ],
+    "capacity": 383,
+    "free": 45,
+    "timestamp": "2023-12-04T11:11:00+01:00"
+  },
+  {
+    "id": "SAP_Arena_P1",
+    "name": "SAP Arena P1",
+    "operatorId": "stadt_mannheim",
+    "dataType": "parkingCar",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.470955,
+        49.480862
+      ]
+    },
+    "address": {
+      "country": "Deutschland",
+      "countryCode": "de"
+    },
+    "networkId": "Mobidata",
+    "description": "SAP Arena P1, Parkhaus",
+    "trafficType": "car",
+    "type": "carPark",
+    "properties": [
+      "carPark"
+    ],
+    "capacity": 348,
+    "free": 0,
+    "timestamp": "2023-12-04T11:11:00+01:00"
+  },
+  {
+    "id": "U2",
+    "name": "U2 Tiefgarage",
+    "operatorId": "stadt_mannheim",
+    "dataType": "parkingCar",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.4721155,
+        49.4914255
+      ]
+    },
+    "address": {
+      "street": "U3",
+      "houseNo": "8",
+      "postalCode": "68161",
+      "city": "Mannheim",
+      "state": "Baden-Württemberg",
+      "country": "Deutschland",
+      "countryCode": "de"
+    },
+    "networkId": "Mobidata",
+    "description": "U2, Tiefgarage",
+    "trafficType": "car",
+    "type": "carPark",
+    "properties": [
+      "carPark"
+    ],
+    "capacity": 190,
+    "free": 3,
+    "timestamp": "2023-12-04T11:11:00+01:00"
+  },
+  {
+    "id": "PH04",
+    "name": "D5 Rathaus",
+    "operatorId": "stadt_mannheim",
+    "dataType": "parkingCar",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.462072841535385,
+        49.4887902449769
+      ]
+    },
+    "address": {
+      "country": "Deutschland",
+      "countryCode": "de"
+    },
+    "networkId": "Mobidata",
+    "description": "PH04 D5 Rathaus",
+    "trafficType": "car",
+    "type": "carPark",
+    "properties": [
+      "carPark"
+    ],
+    "capacity": 349,
+    "free": 48,
+    "timestamp": "2023-12-04T11:11:00+01:00"
+  },
+  {
+    "id": "PH12",
+    "name": "G1 Markt",
+    "operatorId": "stadt_mannheim",
+    "dataType": "parkingCar",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.455677999999999,
+        49.49200020000001
+      ]
+    },
+    "address": {
+      "street": "G1",
+      "houseNo": "2",
+      "postalCode": "68159",
+      "city": "Mannheim",
+      "state": "Baden-Württemberg",
+      "country": "Deutschland",
+      "countryCode": "de"
+    },
+    "networkId": "Mobidata",
+    "description": "PH12 G1 Markt",
+    "trafficType": "car",
+    "type": "carPark",
+    "properties": [
+      "carPark"
+    ],
+    "capacity": 330,
+    "free": 155,
+    "timestamp": "2023-12-04T11:11:00+01:00"
+  },
+  {
+    "id": "PH47",
+    "name": "P1 Hbf",
+    "operatorId": "stadt_mannheim",
+    "dataType": "parkingCar",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.470257159064332,
+        49.480064468648855
+      ]
+    },
+    "address": {
+      "country": "Deutschland",
+      "countryCode": "de"
+    },
+    "networkId": "Mobidata",
+    "description": "PH47 P1 Hbf",
+    "trafficType": "car",
+    "type": "carPark",
+    "properties": [
+      "carPark"
+    ],
+    "capacity": 322,
+    "free": 100,
+    "timestamp": "2023-12-04T11:11:00+01:00"
+  },
+  {
+    "id": "SAP_Arena_P6_P8",
+    "name": "SAP Arena P6-P8",
+    "operatorId": "stadt_mannheim",
+    "dataType": "parkingCar",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.5163041,
+        49.4609849
+      ]
+    },
+    "address": {
+      "street": "Xaver-Fuhr-Straße",
+      "houseNo": "152",
+      "postalCode": "68163",
+      "city": "Mannheim",
+      "state": "Baden-Württemberg",
+      "country": "Deutschland",
+      "countryCode": "de"
+    },
+    "networkId": "Mobidata",
+    "description": "SAP Arena P6-P8, Parkplatz",
+    "trafficType": "car",
+    "type": "carPark",
+    "properties": [
+      "carPark"
+    ],
+    "capacity": 1520,
+    "free": 1500,
+    "timestamp": "2023-12-04T11:11:00+01:00"
+  },
+  {
+    "id": "Collini_Center_Mulde",
+    "name": "Collini-Center Mulde",
+    "operatorId": "stadt_mannheim",
+    "dataType": "parkingCar",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.4769936,
+        49.4909506
+      ]
+    },
+    "address": {
+      "street": "Collinistraße",
+      "houseNo": "1-5",
+      "postalCode": "68161",
+      "city": "Mannheim",
+      "state": "Baden-Württemberg",
+      "country": "Deutschland",
+      "countryCode": "de"
+    },
+    "networkId": "Mobidata",
+    "description": "Collini-Center Mulde, Parkplatz",
+    "trafficType": "car",
+    "type": "carPark",
+    "properties": [
+      "carPark"
+    ],
+    "capacity": 213,
+    "free": 11,
+    "timestamp": "2023-12-04T11:11:00+01:00"
+  },
+  {
+    "id": "H6",
+    "name": "H6",
+    "operatorId": "stadt_mannheim",
+    "dataType": "parkingCar",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.4639929,
+        49.4922301
+      ]
+    },
+    "address": {
+      "street": "H6",
+      "houseNo": "1",
+      "postalCode": "68159",
+      "city": "Mannheim",
+      "state": "Baden-Württemberg",
+      "country": "Deutschland",
+      "countryCode": "de"
+    },
+    "networkId": "Mobidata",
+    "description": "H6, Tiefgarage",
+    "trafficType": "car",
+    "type": "carPark",
+    "properties": [
+      "carPark"
+    ],
+    "capacity": 271,
+    "free": 0,
+    "timestamp": "2023-12-04T11:11:00+01:00"
+  },
+  {
+    "id": "PH48",
+    "name": "P2 Hbf",
+    "operatorId": "stadt_mannheim",
+    "dataType": "parkingCar",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.471254731045843,
+        49.47886368681676
+      ]
+    },
+    "address": {
+      "country": "Deutschland",
+      "countryCode": "de"
+    },
+    "networkId": "Mobidata",
+    "description": "PH48 P2 Hbf",
+    "trafficType": "car",
+    "type": "carPark",
+    "properties": [
+      "carPark"
+    ],
+    "capacity": 318,
+    "free": 181,
+    "timestamp": "2023-12-04T11:11:00+01:00"
+  },
+  {
+    "id": "M4a",
+    "name": "M4a",
+    "operatorId": "stadt_mannheim",
+    "dataType": "parkingCar",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.4667665,
+        49.4840244
+      ]
+    },
+    "address": {
+      "street": "M4a",
+      "houseNo": "7",
+      "postalCode": "68161",
+      "city": "Mannheim",
+      "state": "Baden-Württemberg",
+      "country": "Deutschland",
+      "countryCode": "de"
+    },
+    "networkId": "Mobidata",
+    "description": "M4a, Parkplatz",
+    "trafficType": "car",
+    "type": "carPark",
+    "properties": [
+      "carPark"
+    ],
+    "capacity": 68,
+    "free": 0,
+    "timestamp": "2023-12-04T11:11:00+01:00"
+  },
+  {
+    "id": "PH24",
+    "name": "N6 alt",
+    "operatorId": "stadt_mannheim",
+    "dataType": "parkingCar",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.470283199999999,
+        49.48497159999999
+      ]
+    },
+    "address": {
+      "street": "N6",
+      "houseNo": "7",
+      "postalCode": "68161",
+      "city": "Mannheim",
+      "state": "Baden-Württemberg",
+      "country": "Deutschland",
+      "countryCode": "de"
+    },
+    "networkId": "Mobidata",
+    "description": "PH24 N6 alt",
+    "trafficType": "car",
+    "type": "carPark",
+    "properties": [
+      "carPark"
+    ],
+    "capacity": 200,
+    "free": 111,
+    "timestamp": "2023-12-04T11:11:00+01:00"
+  },
+  {
+    "id": "PH23",
+    "name": "N6 neu",
+    "operatorId": "stadt_mannheim",
+    "dataType": "parkingCar",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.469697669423416,
+        49.484902727803615
+      ]
+    },
+    "address": {
+      "country": "Deutschland",
+      "countryCode": "de"
+    },
+    "networkId": "Mobidata",
+    "description": "PH23 N6 neu",
+    "trafficType": "car",
+    "type": "carPark",
+    "properties": [
+      "carPark"
+    ],
+    "capacity": 293,
+    "free": 109,
+    "timestamp": "2023-12-04T11:11:00+01:00"
+  },
+  {
+    "id": "SAP_Arena_P3",
+    "name": "SAP Arena P3",
+    "operatorId": "stadt_mannheim",
+    "dataType": "parkingCar",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.51726,
+        49.46439
+      ]
+    },
+    "address": {
+      "country": "Deutschland",
+      "countryCode": "de"
+    },
+    "networkId": "Mobidata",
+    "description": "SAP Arena P3, Parkhaus",
+    "trafficType": "car",
+    "type": "carPark",
+    "properties": [
+      "carPark"
+    ],
+    "capacity": 850,
+    "free": 0,
+    "timestamp": "2023-12-04T11:11:00+01:00"
+  },
+  {
+    "id": "PH03",
+    "name": "D3",
+    "operatorId": "stadt_mannheim",
+    "dataType": "parkingCar",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.463793458085014,
+        49.48808789361271
+      ]
+    },
+    "address": {
+      "country": "Deutschland",
+      "countryCode": "de"
+    },
+    "networkId": "Mobidata",
+    "description": "PH03 D3",
+    "trafficType": "car",
+    "type": "carPark",
+    "properties": [
+      "carPark"
+    ],
+    "capacity": 368,
+    "free": 91,
+    "timestamp": "2023-12-04T11:11:00+01:00"
+  },
+  {
+    "id": "N1_N2_Stadthaus",
+    "name": "N1/N2 Stadthaus",
+    "operatorId": "stadt_mannheim",
+    "dataType": "parkingCar",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.465498799999999,
+        49.4863155
+      ]
+    },
+    "address": {
+      "street": "N1",
+      "houseNo": "1",
+      "postalCode": "68161",
+      "city": "Mannheim",
+      "state": "Baden-Württemberg",
+      "country": "Deutschland",
+      "countryCode": "de"
+    },
+    "networkId": "Mobidata",
+    "description": "N1/N2 Stadthaus, Parkhaus",
+    "trafficType": "car",
+    "type": "carPark",
+    "properties": [
+      "carPark"
+    ],
+    "capacity": 727,
+    "free": 92,
+    "timestamp": "2023-12-04T11:11:00+01:00"
+  },
+  {
+    "id": "SAP_Arena_P2",
+    "name": "SAP Arena P2",
+    "operatorId": "stadt_mannheim",
+    "dataType": "parkingCar",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.516939100000002,
+        49.462353
+      ]
+    },
+    "address": {
+      "street": "An der Arena",
+      "houseNo": "1",
+      "postalCode": "68163",
+      "city": "Mannheim",
+      "state": "Baden-Württemberg",
+      "country": "Deutschland",
+      "countryCode": "de"
+    },
+    "networkId": "Mobidata",
+    "description": "SAP Arena P2, Parkhaus",
+    "trafficType": "car",
+    "type": "carPark",
+    "properties": [
+      "carPark"
+    ],
+    "capacity": 815,
+    "free": 0,
+    "timestamp": "2023-12-04T11:11:00+01:00"
+  },
+  {
+    "id": "Hauptbahnhof_P3",
+    "name": "Hauptbahnhof P3",
+    "operatorId": "stadt_mannheim",
+    "dataType": "parkingCar",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.474409999999999,
+        49.47953
+      ]
+    },
+    "address": {
+      "street": "Keplerstraße",
+      "houseNo": "21-25",
+      "postalCode": "68165",
+      "city": "Mannheim",
+      "state": "Baden-Württemberg",
+      "country": "Deutschland",
+      "countryCode": "de"
+    },
+    "networkId": "Mobidata",
+    "description": "Hauptbahnhof P3, Parkhaus",
+    "trafficType": "car",
+    "type": "carPark",
+    "properties": [
+      "carPark"
+    ],
+    "capacity": 222,
+    "free": 94,
+    "timestamp": "2023-12-04T11:11:00+01:00"
+  },
+  {
+    "id": "PH20",
+    "name": "PH20",
+    "operatorId": "stadt_mannheim",
+    "dataType": "parkingCar",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.509627,
+        49.471613
+      ]
+    },
+    "address": {
+      "street": "",
+      "houseNo": "",
+      "postalCode": "",
+      "city": "",
+      "state": "",
+      "country": "Deutschland",
+      "countryCode": "de"
+    },
+    "networkId": "Mobidata",
+    "description": "P20 MPB, Parkplatz",
+    "trafficType": "car",
+    "type": "carPark",
+    "properties": [
+      "carPark"
+    ],
+    "capacity": 6000,
+    "free": 5999,
+    "timestamp": "2023-12-04T11:11:00+01:00"
+  },
+  {
+    "id": "PH42",
+    "name": "FINA",
+    "operatorId": "stadt_mannheim",
+    "dataType": "parkingCar",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.47748564285496,
+        49.48213865713261
+      ]
+    },
+    "address": {
+      "street": "",
+      "houseNo": "",
+      "postalCode": "",
+      "city": "",
+      "state": "",
+      "country": "Deutschland",
+      "countryCode": "de"
+    },
+    "networkId": "Mobidata",
+    "description": "PH42 FINA",
+    "trafficType": "car",
+    "type": "carPark",
+    "properties": [
+      "carPark"
+    ],
+    "capacity": 122,
+    "free": 40,
+    "timestamp": "2023-12-04T11:11:00+01:00"
+  },
+  {
+    "id": "PH45",
+    "name": "Maritim",
+    "operatorId": "stadt_mannheim",
+    "dataType": "parkingCar",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.475202203627983,
+        49.48360584009847
+      ]
+    },
+    "address": {
+      "street": "",
+      "houseNo": "",
+      "postalCode": "",
+      "city": "",
+      "state": "",
+      "country": "Deutschland",
+      "countryCode": "de"
+    },
+    "networkId": "Mobidata",
+    "description": "PH45 Maritim",
+    "trafficType": "car",
+    "type": "carPark",
+    "properties": [
+      "carPark"
+    ],
+    "capacity": 167,
+    "free": 33,
+    "timestamp": "2023-12-04T11:11:00+01:00"
+  },
+  {
+    "id": "PH13",
+    "name": "K1",
+    "operatorId": "stadt_mannheim",
+    "dataType": "parkingCar",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.470121640414819,
+        49.492622761108976
+      ]
+    },
+    "address": {
+      "street": "",
+      "houseNo": "",
+      "postalCode": "",
+      "city": "",
+      "state": "",
+      "country": "Deutschland",
+      "countryCode": "de"
+    },
+    "networkId": "Mobidata",
+    "description": "PH13 K1 Karstadt",
+    "trafficType": "car",
+    "type": "carPark",
+    "properties": [
+      "carPark"
+    ],
+    "capacity": 157,
+    "free": 7,
+    "timestamp": "2023-12-04T11:11:00+01:00"
+  },
+  {
+    "id": "PH21",
+    "name": "N1 Stadthaus",
+    "operatorId": "stadt_mannheim",
+    "dataType": "parkingCar",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.465355755651503,
+        49.486282497055825
+      ]
+    },
+    "address": {
+      "street": "",
+      "houseNo": "",
+      "postalCode": "",
+      "city": "",
+      "state": "",
+      "country": "Deutschland",
+      "countryCode": "de"
+    },
+    "networkId": "Mobidata",
+    "description": "PH21 N1 Stadthaus",
+    "trafficType": "car",
+    "type": "carPark",
+    "properties": [
+      "carPark"
+    ],
+    "capacity": 335,
+    "free": 65,
+    "timestamp": "2023-12-04T11:11:00+01:00"
+  },
+  {
+    "id": "PH22",
+    "name": "N2 Stadthaus",
+    "operatorId": "stadt_mannheim",
+    "dataType": "parkingCar",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        8.466105136919762,
+        49.485974901408674
+      ]
+    },
+    "address": {
+      "street": "",
+      "houseNo": "",
+      "postalCode": "",
+      "city": "",
+      "state": "",
+      "country": "Deutschland",
+      "countryCode": "de"
+    },
+    "networkId": "Mobidata",
+    "description": "PH22 N2 Stadthaus",
+    "trafficType": "car",
+    "type": "carPark",
+    "properties": [
+      "carPark"
+    ],
+    "capacity": 260,
+    "free": 26,
+    "timestamp": "2023-12-04T11:11:00+01:00"
+  }
+]

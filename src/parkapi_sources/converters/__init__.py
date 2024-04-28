@@ -9,7 +9,7 @@ from .bfrk_bw import BfrkBwOepnvBikePushConverter, BfrkBwOepnvCarPushConverter, 
 from .freiburg import FreiburgPullConverter
 from .heidelberg import HeidelbergPullConverter
 from .karlsruhe import KarlsruhePullConverter
-from .mannheim import MannheimPullConverter
+from .mannheim_buchen import BuchenPushConverter, MannheimPushConverter
 from .neckarsulm import NeckarsulmPushConverter
 from .pbw import PbwPullConverter
 from .pforzheim import PforzheimPushConverter

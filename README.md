@@ -13,10 +13,11 @@ We support following data sources:
 | Barrierefreie Reisekette Baden-Württemberg: PKW-Parkplätze an Bushaltestellen     | car     | push (csv)  | `bfrk_bw_spnv_car`   | no       |
 | Barrierefreie Reisekette Baden-Württemberg: Fahrrad-Parkplätze an Bahnhöfen       | bike    | push (csv)  | `bfrk_bw_oepnv_bike` | no       |
 | Barrierefreie Reisekette Baden-Württemberg: Fahrrad-Parkplätze an Bushaltestellen | bike    | push (csv)  | `bfrk_bw_spnv_bike`  | no       |
+| Stadt Buchen                                                                      | car     | push (json) | `buchen`             | yes      |
 | Stadt Freiburg                                                                    | car     | pull        | `freiburg`           | yes      |
 | Stadt Heidelberg                                                                  | car     | pull        | `heidelberg`         | yes      |
 | Stadt Karlsruhe                                                                   | car     | pull        | `karlsruhe`          | yes      |
-| Stadt Mannheim                                                                    | car     | pull        | `mannheim`           | yes      |
+| Stadt Mannheim                                                                    | car     | push (json) | `mannheim`           | yes      |
 | Stadt Karlsruhe                                                                   | car     | push (csv)  | `neckarsulm`         | no       |
 | Parkraumgesellschaft Baden-Württemberg                                            | car     | pull        | `pbw`                | yes      |
 | Stadt Pforzheim                                                                   | car     | push (csv)  | `pforzheim`          | no       |

@@ -1,0 +1,34 @@
+[
+  {
+    "id": "P8_Parkdeck_Altstadt_Haagstrasse",
+    "name": "P8 Parkdeck Altstadt Haagstraße",
+    "operatorId": "stadt_buchen",
+    "dataType": "parkingCar",
+    "location": {
+      "coordinates": [
+        9.326514294042138,
+        49.52211082686668
+      ],
+      "type": "Point"
+    },
+    "address": {
+      "street": "Haagstraße",
+      "houseNo": "",
+      "postalCode": "74722",
+      "city": "Buchen",
+      "state": "Baden-Württemberg",
+      "country": "Deutschland",
+      "countryCode": "de"
+    },
+    "networkId": "Mobidata",
+    "description": "Parkhaus Haagstrasse",
+    "trafficType": "car",
+    "type": "carPark",
+    "properties": [
+      "carPark"
+    ],
+    "capacity": 60,
+    "free": 2,
+    "timestamp": "2023-12-04T11:02:00+01:00"
+  }
+]
