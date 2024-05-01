@@ -11,6 +11,7 @@ from .heidelberg import HeidelbergPullConverter
 from .karlsruhe import KarlsruhePullConverter
 from .kienzler import KienzlerPullConverter
 from .mannheim_buchen import BuchenPushConverter, MannheimPushConverter
+from .karlsruhe import KarlsruheBikePullConverter, KarlsruhePullConverter
 from .neckarsulm import NeckarsulmPushConverter
 from .neckarsulm_bike import NeckarsulmBikePushConverter
 from .pbw import PbwPullConverter

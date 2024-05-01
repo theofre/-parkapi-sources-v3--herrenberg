@@ -9,7 +9,8 @@ from enum import Enum
 from typing import Optional
 
 import pyproj
-from validataclass.dataclasses import validataclass
+from validataclass.dataclasses import DefaultUnset, validataclass
+from validataclass.helpers import OptionalUnset, UnsetValue
 from validataclass.validators import (
     DataclassValidator,
     DateTimeValidator,
@@ -17,6 +18,7 @@ from validataclass.validators import (
     EnumValidator,
     IntegerValidator,
     Noneable,
+    NoneToUnsetValue,
     NumericValidator,
     StringValidator,
     UrlValidator,
@@ -24,7 +26,7 @@ from validataclass.validators import (
 
 from parkapi_sources.converters.base_converter.pull import GeojsonFeatureGeometryInput
 from parkapi_sources.models import RealtimeParkingSiteInput, StaticParkingSiteInput
-from parkapi_sources.models.enums import OpeningStatus
+from parkapi_sources.models.enums import OpeningStatus, ParkingSiteType
 from parkapi_sources.validators import ParsedDateValidator
 
 
@@ -100,4 +102,57 @@ class KarlsruheFeatureInput:
             realtime_free_capacity=self.properties.freie_parkplaetze,
             realtime_opening_status=opening_status,
             realtime_data_updated_at=self.properties.stand_freieparkplaetze,
+        )
+
+
+class KarlsruheBikeType(Enum):
+    BIKE_BOX = 'Fahrradbox'
+    STANDS_WITH_ROOF = 'Fahrradabstellanlage überdacht'
+    STANDS = 'Fahrradabstellanlage'
+    STATION = 'Fahrradstation'
+
+    # TODO: mapping is quite unclear
+    def to_parking_site_type(self) -> ParkingSiteType:
+        return {
+            self.BIKE_BOX: ParkingSiteType.BUILDING,
+            self.STANDS: ParkingSiteType.STANDS,
+            self.STANDS_WITH_ROOF: ParkingSiteType.STANDS,
+            self.STATION: ParkingSiteType.BUILDING,
+        }.get(self)
+
+
+@validataclass
+class KarlsruheBikePropertiesInput:
+    art: KarlsruheBikeType = EnumValidator(KarlsruheBikeType)
+    standort: str = StringValidator()
+    gemeinde: str = StringValidator()
+    stadtteil: OptionalUnset[str] = NoneToUnsetValue(StringValidator()), DefaultUnset
+    stellplaetze: int = IntegerValidator(allow_strings=True)
+    link: OptionalUnset[str] = NoneToUnsetValue(UrlValidator()), DefaultUnset
+    bemerkung: OptionalUnset[str] = NoneToUnsetValue(StringValidator()), DefaultUnset
+
+
+@validataclass
+class KarlsruheBikeFeatureInput:
+    id: str = StringValidator()
+    geometry: GeojsonFeatureGeometryInput = DataclassValidator(GeojsonFeatureGeometryInput)
+    properties: KarlsruheBikePropertiesInput = DataclassValidator(KarlsruheBikePropertiesInput)
+
+    def to_static_parking_site_input(self, proj: pyproj.Proj) -> StaticParkingSiteInput:
+        coordinates = proj(float(self.geometry.coordinates[1]), float(self.geometry.coordinates[0]), inverse=True)
+
+        address_fragments = [self.properties.standort, self.properties.stadtteil, self.properties.gemeinde]
+        address = ', '.join([fragment for fragment in address_fragments if fragment is not UnsetValue])
+        return StaticParkingSiteInput(
+            uid=str(self.id),
+            name=self.properties.standort,
+            lat=coordinates[1],
+            lon=coordinates[0],
+            capacity=self.properties.stellplaetze,
+            address=address,
+            public_url=self.properties.link,
+            is_covered=self.properties.art == KarlsruheBikeType.STANDS_WITH_ROOF or UnsetValue,
+            description=self.properties.bemerkung,
+            static_data_updated_at=datetime.now(timezone.utc),
+            type=self.properties.art.to_parking_site_type(),
         )
