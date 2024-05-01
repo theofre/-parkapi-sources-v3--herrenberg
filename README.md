@@ -20,7 +20,8 @@ We support following data sources:
 | Stadt Karlsruhe                                                                   | car     | push (csv)  | `neckarsulm`         | no       |
 | Parkraumgesellschaft Baden-Württemberg                                            | car     | pull        | `pbw`                | yes      |
 | Stadt Pforzheim                                                                   | car     | push (csv)  | `pforzheim`          | no       |
-| Stadt Reutlingen                                                                  | car     | push (csv)  | `reutlingen`         | no       |
+| Stadt Reutlingen: PKW-Parkplätze                                                  | car     | push (csv)  | `reutlingen`         | no       |
+| Stadt Reutlingen: Fahrrad-Abstellanlagen                                          | bike    | push (csv)  | `reutlingen_bike`    | no       |
 | Stadt Stuttgart                                                                   | car     | push (json) | `stuttgart`          | yes      |
 | Stadt Ulm                                                                         | car     | pull        | `ulm`                | yes      |
 | Verband Region Stuttgart: Park and Ride                                           | car     | pull        | `vrs_p_r`            | yes      |

@@ -14,6 +14,7 @@ from .neckarsulm import NeckarsulmPushConverter
 from .pbw import PbwPullConverter
 from .pforzheim import PforzheimPushConverter
 from .reutlingen import ReutlingenPushConverter
+from .reutlingen_bike import ReutlingenBikePushConverter
 from .stuttgart import StuttgartPushConverter
 from .ulm import UlmPullConverter
 from .vrs_p_r import VrsParkAndRidePushConverter

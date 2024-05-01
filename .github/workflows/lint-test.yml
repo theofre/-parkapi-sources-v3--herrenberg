@@ -1,9 +1,6 @@
 name: lint
 
 on:
-  push:
-    branches:
-      - '*'
   pull_request:
     branches:
       - '*'
@@ -13,17 +10,15 @@ on:
 jobs:
   lint:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version:
-          - '3'
+
     steps:
     - name: checkout
       uses: actions/checkout@v4
-    - name: setup Python v${{ matrix.python-version }}
+
+    - name: setup Python v3.10
       uses: actions/setup-python@v5
       with:
-        python-version: ${{ matrix.python-version }}
+        python-version: '3.10'
         cache: 'pip'
 
     - name: pip install
@@ -41,3 +36,28 @@ jobs:
       # uses: uses: psf/black@stable
       run: |
         black -S --check --diff ./src ./tests
+
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - name: set timezone
+      uses: szenius/set-timezone@v2.0
+      with:
+        timezoneLinux: "Europe/Berlin"
+
+    - name: checkout
+      uses: actions/checkout@v4
+
+    - name: setup Python v3.10
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+        cache: 'pip'
+
+    - name: pip install
+      run: pip install -r requirements.txt -r requirements-dev.txt
+
+    - name: run pytest
+      run: python -m pytest tests
