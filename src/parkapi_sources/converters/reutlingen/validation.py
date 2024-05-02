@@ -3,16 +3,15 @@ Copyright 2024 binary butterfly GmbH
 Use of this source code is governed by an MIT-style license that can be found in the LICENSE.txt.
 """
 
-import re
+from datetime import datetime, timezone
 from enum import Enum
-from typing import Any
 
 from validataclass.dataclasses import validataclass
-from validataclass.exceptions import ValidationError
-from validataclass.validators import DecimalValidator, EnumValidator, IntegerValidator, ListValidator, StringValidator
+from validataclass.validators import DecimalValidator, EnumValidator, IntegerValidator, StringValidator
 
+from parkapi_sources.models import StaticParkingSiteInput
 from parkapi_sources.models.enums import ParkingSiteType
-from parkapi_sources.validators import ExcelNoneable
+from parkapi_sources.validators import PointCoordinateTupleValidator
 
 
 class ReutlingenParkingSiteType(Enum):
@@ -29,25 +28,22 @@ class ReutlingenParkingSiteType(Enum):
         }.get(self, ParkingSiteType.OTHER)
 
 
-class PointCoordinateTupleValidator(ListValidator):
-    PATTERN = re.compile(r'POINT \(([-+]?\d+\.\d+) ([-+]?\d+\.\d+)\)')
-
-    def validate(self, input_data: Any, **kwargs) -> list:
-        self._ensure_type(input_data, str)
-        input_match = re.match(self.PATTERN, input_data)
-
-        if input_match is None:
-            raise ValidationError(code='invalid_tuple_input', reason='invalid point coordinate tuple input')
-
-        input_data = [input_match.group(1), input_match.group(2)]
-
-        return super().validate(input_data, **kwargs)
-
-
 @validataclass
 class ReutlingenRowInput:
     uid: int = IntegerValidator(allow_strings=True)
     type: ReutlingenParkingSiteType = EnumValidator(ReutlingenParkingSiteType)
     coordinates: list = PointCoordinateTupleValidator(DecimalValidator())
-    capacity: str = ExcelNoneable(IntegerValidator(allow_strings=True))
+    capacity: int = IntegerValidator(allow_strings=True)
     name: str = StringValidator(max_length=255)
+
+    def to_parking_site_input(self) -> StaticParkingSiteInput:
+        return StaticParkingSiteInput(
+            uid=str(self.uid),
+            name=self.name,
+            address=f'{self.name}, Reutlingen',
+            lat=self.coordinates[1],
+            lon=self.coordinates[0],
+            type=self.type.to_parking_site_type_input(),
+            capacity=self.capacity,
+            static_data_updated_at=datetime.now(tz=timezone.utc),
+        )
