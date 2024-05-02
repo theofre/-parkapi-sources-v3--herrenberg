@@ -11,10 +11,20 @@ from openpyxl.cell import Cell
 from openpyxl.workbook.workbook import Workbook
 from validataclass.exceptions import ValidationError
 
-from parkapi_sources.exceptions import ImportParkingSiteException
+from parkapi_sources.exceptions import ImportParkingSiteException, ImportSourceException
 from parkapi_sources.models import StaticParkingSiteInput
 
 from .xlsx_converter import XlsxConverter
+
+
+def remove_special_chars(name: str) -> str:
+    """
+    Remove any hyphen, double spaces and punctuations from a string.
+    """
+    replacements = {'-': '', '.': '', ',': '', '  ': ' ', '"': '', '\\': '', '\n': '', '\t': ''}
+    for repl in replacements.keys():
+        name = name.replace(repl, replacements[repl]) if isinstance(name, str) else 'nan'
+    return name
 
 
 class NormalizedXlsxConverter(XlsxConverter, ABC):
@@ -33,19 +43,19 @@ class NormalizedXlsxConverter(XlsxConverter, ABC):
         'Längengrad': 'lat',
         'Breitengrad': 'lon',
         'Adresse mit PLZ und Stadt': 'address',
-        'Maximale Parkdauer': 'max_stay',
+        'Maximale Parkdauer / min': 'max_stay',
         'Anzahl Stellplätze': 'capacity',
         'Anzahl Carsharing-Parkplätze': 'capacity_carsharing',
         'Anzahl Ladeplätze': 'capacity_charging',
         'Anzahl Frauenparkplätze': 'capacity_woman',
         'Anzahl Behindertenparkplätze': 'capacity_disabled',
-        'Anlage beleuchtet?': 'has_lighting',
-        'gebührenpflichtig?': 'has_fee',
-        'Existieren Live-Daten?': 'has_realtime_data',
+        'Anlage beleuchtet': 'has_lighting',
+        'gebührenpflichtig': 'has_fee',
+        'Existieren Live-Daten': 'has_realtime_data',
         'Gebühren-Informationen': 'fee_description',
         'Webseite': 'public_url',
         'Park&Ride': 'is_park_and_ride',
-        '24/7 geöffnet?': 'opening_hours_is_24_7',
+        '24/7 geöffnet': 'opening_hours_is_24_7',
         'Öffnungszeiten Mo-Fr Beginn': 'opening_hours_weekday_begin',
         'Öffnungszeiten Mo-Fr Ende': 'opening_hours_weekday_end',
         'Öffnungszeiten Sa Beginn': 'opening_hours_saturday_begin',
@@ -61,6 +71,23 @@ class NormalizedXlsxConverter(XlsxConverter, ABC):
         'Tiefgarage': 'UNDERGROUND',
         'Am Straßenrand': 'ON_STREET',
     }
+
+    def get_mapping_by_header(self, row: tuple[Cell]) -> dict[str, int]:
+        row_values = [cell.value for cell in row]
+        row_values_no_special_chars = [str(remove_special_chars(cell.value)) for cell in row]
+        mapping: dict[str, int] = {}
+        for header_col, target_field in self.header_row.items():
+            header_col_no_special_chars = remove_special_chars(header_col)
+            if header_col in row_values:
+                mapping[target_field] = row_values.index(header_col)
+            elif header_col_no_special_chars in row_values_no_special_chars:
+                mapping[target_field] = row_values_no_special_chars.index(header_col_no_special_chars)
+            else:
+                raise ImportSourceException(
+                    source_uid=self.source_info.uid,
+                    message=f'cannot find header key {header_col}',
+                )
+        return mapping
 
     def handle_xlsx(self, workbook: Workbook) -> tuple[list[StaticParkingSiteInput], list[ImportParkingSiteException]]:
         worksheet = workbook.active
