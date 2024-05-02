@@ -17,6 +17,7 @@ We support following data sources:
 | Stadt Freiburg                                                                    | car     | pull        | `freiburg`           | yes      |
 | Stadt Heidelberg                                                                  | car     | pull        | `heidelberg`         | yes      |
 | Stadt Karlsruhe                                                                   | car     | pull        | `karlsruhe`          | yes      |
+| Kienzler                                                                          | bike    | pull        | `kienzler`           | yes      |
 | Stadt Mannheim                                                                    | car     | push (json) | `mannheim`           | yes      |
 | Stadt Karlsruhe                                                                   | car     | push (csv)  | `neckarsulm`         | no       |
 | Baden-Württemberg: Parken und Mitfahren                                           | car     | push (xlsx) | `pum_bw`             | no       |
