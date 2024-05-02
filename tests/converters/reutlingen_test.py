@@ -25,8 +25,7 @@ class ReutlingenPushConverterTest:
 
         static_parking_site_inputs, import_parking_site_exceptions = reutlingen_push_converter.handle_csv_string(reutlingen_data)
 
-        assert len(static_parking_site_inputs) > len(
-            import_parking_site_exceptions
-        ), 'There should be more valid then invalid parking sites'
+        assert len(static_parking_site_inputs) == 12, 'There should be 12 parking sites'
+        assert len(import_parking_site_exceptions) == 102, 'There should be 102 exceptions'
 
         validate_static_parking_site_inputs(static_parking_site_inputs)

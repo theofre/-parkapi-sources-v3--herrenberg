@@ -10,11 +10,15 @@ from .ellwangen import EllwangenPushConverter
 from .freiburg import FreiburgPullConverter
 from .heidelberg import HeidelbergPullConverter
 from .karlsruhe import KarlsruhePullConverter
-from .mannheim import MannheimPullConverter
+from .kienzler import KienzlerPullConverter
+from .mannheim_buchen import BuchenPushConverter, MannheimPushConverter
 from .neckarsulm import NeckarsulmPushConverter
+from .neckarsulm_bike import NeckarsulmBikePushConverter
 from .pbw import PbwPullConverter
 from .pforzheim import PforzheimPushConverter
+from .pum_bw import PumBwPushConverter
 from .reutlingen import ReutlingenPushConverter
+from .reutlingen_bike import ReutlingenBikePushConverter
 from .stuttgart import StuttgartPushConverter
 from .ulm import UlmPullConverter
 from .vrs_p_r import VrsParkAndRidePushConverter

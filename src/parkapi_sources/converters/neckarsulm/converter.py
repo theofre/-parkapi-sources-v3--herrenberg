@@ -17,7 +17,7 @@ class NeckarsulmPushConverter(CsvConverter):
 
     source_info = SourceInfo(
         uid='neckarsulm',
-        name='Stadt Neckarsulm',
+        name='Stadt Neckarsulm: PKW-Parkplätze',
         public_url='https://www.neckarsulm.de',
         has_realtime_data=False,
     )
