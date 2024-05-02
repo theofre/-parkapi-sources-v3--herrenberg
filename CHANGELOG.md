@@ -2,7 +2,7 @@
 
 ## 0.3.0
 
-Released 2024-05-03
+Released 2024-05-02
 
 Features:
 
