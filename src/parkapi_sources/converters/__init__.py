@@ -13,6 +13,7 @@ from .mannheim_buchen import BuchenPushConverter, MannheimPushConverter
 from .neckarsulm import NeckarsulmPushConverter
 from .pbw import PbwPullConverter
 from .pforzheim import PforzheimPushConverter
+from .pum_bw import PumBwPushConverter
 from .reutlingen import ReutlingenPushConverter
 from .reutlingen_bike import ReutlingenBikePushConverter
 from .stuttgart import StuttgartPushConverter
