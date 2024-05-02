@@ -188,6 +188,48 @@ If you test a `PullConverter`, you will need no mock requests. This can be done 
 If you created new validators, these should be tested with different inputs. Usually, `pytest.parametrize` is a nice approach to do this.
 
 
+### Migrate a converter
+
+If you want to migrate a v1 or v2 converter, you can re-use some of the code. There is a paradigm change, though: `parkapi-source-v3` 
+enforces a strict validation after transforming the data, while v1 and v2 converters don't. ParkAPI v1 / v2 converters are always pull
+converters, so the base class is always `PullConverter`.
+
+Instead of defining `POOL`, you will set `source_info` at the same place. Attributes are almost the same, except for `id` was renamed to 
+`uid`, and there is the new attribute `has_realtime_data`, which has to be set.
+
+ParkAPI v1 and v2 used two methods for static and realtime data, just as `parkapi-sources-v3`:
+
+- the old static data handling `def get_lot_infos(self) -> List[LotInfo]:` is
+  `get_static_parking_sites(self) -> tuple[list[StaticParkingSiteInput], list[ImportParkingSiteException]]:` in `parkapi-sources-v3`.
+- the old realtime data handling`def get_lot_data(self) -> List[LotData]:` is
+  `def get_realtime_parking_sites(self) -> tuple[list[RealtimeParkingSiteInput], list[ImportParkingSiteException]]:` in 
+  `parkapi-sources-v3`.
+
+The result objects have quite the same idea, too:
+
+- `LotInfo` gets `StaticParkingSiteInput`
+- `LotData` gets `RealtimeParkingSiteInput`
+
+There's also a helper for scraped content: before, there was `self.request_soup(self.POOL.public_url)` in order to get a `BeautifulSoup`
+element. Now, there is a helper mixin called `PullScraperMixin`. You can use it this way: 
+
+```
+class MyPullConverter(PullConverter, PullScraperMixin):
+```
+
+Additionally, there is another mixin for the GeoJSON files you already know from v1 and v2 converters: `StaticGeojsonDataMixin`. Using this,
+you can just define the static data method this way:
+
+```
+    def get_static_parking_sites(self) -> tuple[list[StaticParkingSiteInput], list[ImportParkingSiteException]]:
+        return self._get_static_parking_site_inputs_and_exceptions(source_uid=self.source_info.uid)
+```
+
+Afterwards, you can put the GeoJSON file to `/data`.
+
+Please keep in mind that you will have to add tests for the migrated scraper.
+
+
 ### Linting
 
 As we try to keep a consistent code style, please lint your code before creating the merge request. We use `black` and `ruff` for linting.
