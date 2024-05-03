@@ -21,7 +21,7 @@ class ReutlingenBikePushConverter(CsvConverter):
     reutlingen_bike_row_validator = DataclassValidator(ReutlingenBikeRowInput)
 
     source_info = SourceInfo(
-        uid='reutlingen',
+        uid='reutlingen_bike',
         name='Stadt Reutlingen: Fahrrad-Abstellanlagen',
         public_url='https://www.reutlingen.de',
         has_realtime_data=False,

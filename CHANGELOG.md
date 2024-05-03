@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.3.1
+
+Released 2024-05-03
+
+Fixes:
+* Register neckarsulm_bike and reutlingen_bike properly
+
 ## 0.3.0
 
 Released 2024-05-02

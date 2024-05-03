@@ -19,7 +19,7 @@ class NeckarsulmBikePushConverter(CsvConverter):
     proj: pyproj.Proj = pyproj.Proj(proj='utm', zone=32, ellps='WGS84', preserve_units=True)
 
     source_info = SourceInfo(
-        uid='neckarsulm',
+        uid='neckarsulm_bike',
         name='Stadt Neckarsulm: Fahrad-Abstellanlagen',
         public_url='https://www.neckarsulm.de',
         has_realtime_data=False,
