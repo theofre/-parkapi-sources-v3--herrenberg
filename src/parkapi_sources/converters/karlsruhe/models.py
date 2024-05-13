@@ -111,12 +111,11 @@ class KarlsruheBikeType(Enum):
     STANDS = 'Fahrradabstellanlage'
     STATION = 'Fahrradstation'
 
-    # TODO: mapping is quite unclear
     def to_parking_site_type(self) -> ParkingSiteType:
         return {
-            self.BIKE_BOX: ParkingSiteType.BUILDING,
+            self.BIKE_BOX: ParkingSiteType.LOCKERS,
             self.STANDS: ParkingSiteType.STANDS,
-            self.STANDS_WITH_ROOF: ParkingSiteType.STANDS,
+            self.STANDS_WITH_ROOF: ParkingSiteType.SHED,
             self.STATION: ParkingSiteType.BUILDING,
         }.get(self)
 

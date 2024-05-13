@@ -8,10 +8,9 @@ from .base_converter import BaseConverter
 from .bfrk_bw import BfrkBwOepnvBikePushConverter, BfrkBwOepnvCarPushConverter, BfrkBwSpnvBikePushConverter, BfrkBwSpnvCarPushConverter
 from .freiburg import FreiburgPullConverter
 from .heidelberg import HeidelbergPullConverter
-from .karlsruhe import KarlsruhePullConverter
+from .karlsruhe import KarlsruheBikePullConverter, KarlsruhePullConverter
 from .kienzler import KienzlerPullConverter
 from .mannheim_buchen import BuchenPushConverter, MannheimPushConverter
-from .karlsruhe import KarlsruheBikePullConverter, KarlsruhePullConverter
 from .neckarsulm import NeckarsulmPushConverter
 from .neckarsulm_bike import NeckarsulmBikePushConverter
 from .pbw import PbwPullConverter
