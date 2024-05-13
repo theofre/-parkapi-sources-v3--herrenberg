@@ -10,6 +10,7 @@ from .freiburg import FreiburgPullConverter
 from .heidelberg import HeidelbergPullConverter
 from .karlsruhe import KarlsruhePullConverter
 from .kienzler import KienzlerPullConverter
+from .konstanz_bike import KonstanzBikePushConverter
 from .mannheim_buchen import BuchenPushConverter, MannheimPushConverter
 from .neckarsulm import NeckarsulmPushConverter
 from .neckarsulm_bike import NeckarsulmBikePushConverter
