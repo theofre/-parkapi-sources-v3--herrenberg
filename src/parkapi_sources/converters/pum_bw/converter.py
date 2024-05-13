@@ -62,7 +62,7 @@ class PumBwPushConverter(XlsxConverter):
 
     @staticmethod
     def map_row_to_parking_site_dict(mapping: dict[str, int], row: list[Cell]) -> dict[str, Any]:
-        parking_site_dict: dict[str, str] = {}
+        parking_site_dict: dict[str, Any] = {}
         for field in mapping.keys():
             parking_site_dict[field] = row[mapping[field]].value
 
