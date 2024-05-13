@@ -30,7 +30,6 @@ class ExcelStaticParkingSiteInput(StaticParkingSiteInput):
     uid: str = NumberCastingStringValidator(min_length=1, max_length=256)
     has_lighting: Optional[bool] = ExcelNoneable(ExcelMappedBooleanValidator())
     has_fee: Optional[bool] = ExcelNoneable(ExcelMappedBooleanValidator())
-    is_supervised: Optional[bool] = ExcelNoneable(ExcelMappedBooleanValidator())
     has_realtime_data: Optional[bool] = ExcelNoneable(ExcelMappedBooleanValidator(), default=False)
     max_stay: Optional[int] = ExcelNoneable(GermanDurationIntegerValidator()), Default(None)
 
