@@ -58,9 +58,7 @@ class EllwangenPushConverter(NormalizedXlsxConverter):
         for field in mapping.keys():
             parking_site_dict[field] = row[mapping[field]].value
 
-        # TO DO: Maximale Parkdauer is in Minutes, which should be converted to seconds
-        parking_site_dict['max_stay'] = parking_site_dict['max_stay'] * 60 if isinstance(parking_site_dict['max_stay'], int) else None
-
+        parking_site_dict['max_stay'] = parking_site_dict['max_stay'] * 60 if parking_site_dict['max_stay'] else None
         parking_site_dict['type'] = self.type_mapping.get(parking_site_dict.get('type'))
         parking_site_dict['static_data_updated_at'] = datetime.now(tz=timezone.utc).isoformat()
 
