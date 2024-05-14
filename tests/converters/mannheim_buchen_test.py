@@ -7,7 +7,6 @@ import json
 from unittest.mock import Mock
 
 import pytest
-from parkapi_sources.converters import BuchenPushConverter
 from parkapi_sources.converters.mannheim_buchen import MannheimPushConverter
 from parkapi_sources.models import RealtimeParkingSiteInput, StaticParkingSiteInput
 
@@ -22,30 +21,11 @@ def mannheim_push_converter(mocked_config_helper: Mock) -> MannheimPushConverter
 class MannheimPullConverterTest:
     @staticmethod
     def test_get_parking_sites(mannheim_push_converter: MannheimPushConverter):
+        # TODO: set proper test files as soon as we get them
         with get_data_path('mannheim.json').open('br') as json_file:
             json_data = json.load(json_file)
 
         parking_site_inputs, import_parking_site_exceptions = mannheim_push_converter.handle_json(json_data)
-
-        assert len(parking_site_inputs) == len(json_data) * 2, 'There should be two parking sites per input dataset.'
-        assert len(import_parking_site_exceptions) == 0, 'There should be no exceptions'
-
-        validate_static_parking_site_inputs([item for item in parking_site_inputs if isinstance(item, StaticParkingSiteInput)])
-        validate_realtime_parking_site_inputs([item for item in parking_site_inputs if isinstance(item, RealtimeParkingSiteInput)])
-
-
-@pytest.fixture
-def buchen_push_converter(mocked_config_helper: Mock) -> BuchenPushConverter:
-    return BuchenPushConverter(config_helper=mocked_config_helper)
-
-
-class BuchenPushConverterTest:
-    @staticmethod
-    def test_get_parking_sites(buchen_push_converter: BuchenPushConverter):
-        with get_data_path('buchen.json').open('br') as json_file:
-            json_data = json.load(json_file)
-
-        parking_site_inputs, import_parking_site_exceptions = buchen_push_converter.handle_json(json_data)
 
         assert len(parking_site_inputs) == len(json_data) * 2, 'There should be two parking sites per input dataset.'
         assert len(import_parking_site_exceptions) == 0, 'There should be no exceptions'
