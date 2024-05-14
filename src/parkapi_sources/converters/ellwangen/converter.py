@@ -21,6 +21,37 @@ class EllwangenPushConverter(NormalizedXlsxConverter):
         has_realtime_data=False,
     )
 
+    # If there are more tables with our defined format, it would make sense to move header_row to XlsxConverter
+    header_row: dict[str, str] = {
+        'ID': 'uid',
+        'Name': 'name',
+        'Art der Anlage': 'type',
+        'Betreiber Name': 'operator_name',
+        'Längengrad': 'lat',
+        'Breitengrad': 'lon',
+        'Adresse mit PLZ und Stadt': 'address',
+        'Maximale Parkdauer / min': 'max_stay',
+        'Anzahl Stellplätze': 'capacity',
+        'Anzahl Carsharing-Parkplätze': 'capacity_carsharing',
+        'Anzahl Ladeplätze': 'capacity_charging',
+        'Anzahl Frauen-parkplätze': 'capacity_woman',
+        'Anzahl Behinderten-parkplätze': 'capacity_disabled',
+        'Anlage beleuchtet': 'has_lighting',
+        'gebührenpflichtig': 'has_fee',
+        'Existieren Live-Daten': 'has_realtime_data',
+        'Gebühren-Informationen': 'fee_description',
+        'Webseite': 'public_url',
+        'Park&Ride': 'is_park_and_ride',
+        '24/7 geöffnet': 'opening_hours_is_24_7',
+        'Öffnungszeiten Mo-Fr Beginn': 'opening_hours_weekday_begin',
+        'Öffnungszeiten Mo-Fr Ende': 'opening_hours_weekday_end',
+        'Öffnungszeiten Sa Beginn': 'opening_hours_saturday_begin',
+        'Öffnungszeiten Sa Ende': 'opening_hours_saturday_end',
+        'Öffnungszeiten So Beginn': 'opening_hours_sunday_begin',
+        'Öffnungszeiten So Ende': 'opening_hours_sunday_end',
+        'Weitere öffentliche Informationen': 'description',
+    }
+
     def map_row_to_parking_site_dict(self, mapping: dict[str, int], row: list[Cell]) -> dict[str, Any]:
         parking_site_dict: dict[str, str] = {}
 
