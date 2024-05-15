@@ -49,6 +49,7 @@ class StaticParkingSiteInput(BaseParkingSiteInput):
     max_stay: OptionalUnsetNone[int] = Noneable(IntegerValidator(min_value=0, allow_strings=True)), DefaultUnset
     max_height: OptionalUnsetNone[int] = Noneable(IntegerValidator(min_value=0, allow_strings=True)), DefaultUnset
     has_lighting: OptionalUnsetNone[bool] = Noneable(BooleanValidator()), DefaultUnset
+    is_covered: OptionalUnsetNone[bool] = Noneable(BooleanValidator()), DefaultUnset
     fee_description: OptionalUnsetNone[str] = Noneable(StringValidator(max_length=4096)), DefaultUnset
     has_fee: OptionalUnsetNone[bool] = Noneable(BooleanValidator()), DefaultUnset
     park_and_ride_type: OptionalUnsetNone[list[ParkAndRideType]] = (

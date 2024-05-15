@@ -3,6 +3,7 @@ Copyright 2024 binary butterfly GmbH
 Use of this source code is governed by an MIT-style license that can be found in the LICENSE.txt.
 """
 
+from abc import ABC
 from pathlib import Path
 
 import pyproj
@@ -14,25 +15,13 @@ from parkapi_sources.converters.base_converter.pull import GeojsonInput, PullCon
 from parkapi_sources.exceptions import ImportParkingSiteException, ImportSourceException
 from parkapi_sources.models import RealtimeParkingSiteInput, SourceInfo, StaticParkingSiteInput
 
-from .models import KarlsruheFeatureInput
+from .models import KarlsruheBikeFeatureInput, KarlsruheFeatureInput
 
 
-class KarlsruhePullConverter(PullConverter):
+class KarlsruheBasePullConverter(PullConverter, ABC):
     proj: pyproj.Proj = pyproj.Proj(proj='utm', zone=32, ellps='WGS84', preserve_units=True)
     geojson_validator = DataclassValidator(GeojsonInput)
-    karlsruhe_feature_validator = DataclassValidator(KarlsruheFeatureInput)
-    source_info = SourceInfo(
-        uid='karlsruhe',
-        name='Stadt Karlsruhe',
-        public_url='https://web1.karlsruhe.de/service/Parken/',
-        source_url='https://mobil.trk.de:8443/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Aparkhaeuser'
-        '&outputFormat=application%2Fjson',
-        timezone='Europe/Berlin',
-        attribution_contributor='Stadt Karlsruhe',
-        attribution_license='Creative Commons Namensnennung - 4.0 International (CC-BY 4.0)',
-        attribution_url='http://creativecommons.org/licenses/by/4.0/',
-        has_realtime_data=True,
-    )
+    karlsruhe_feature_validator: DataclassValidator
 
     def _get_feature_inputs(self) -> tuple[list[KarlsruheFeatureInput], list[ImportParkingSiteException]]:
         feature_inputs: list[KarlsruheFeatureInput] = []
@@ -77,6 +66,23 @@ class KarlsruhePullConverter(PullConverter):
 
         return static_parking_site_inputs, import_parking_site_exceptions
 
+
+class KarlsruhePullConverter(KarlsruheBasePullConverter):
+    karlsruhe_feature_validator = DataclassValidator(KarlsruheFeatureInput)
+
+    source_info = SourceInfo(
+        uid='karlsruhe',
+        name='Stadt Karlsruhe: PKW-Parkplätze',
+        public_url='https://web1.karlsruhe.de/service/Parken/',
+        source_url='https://mobil.trk.de:8443/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Aparkhaeuser'
+        '&outputFormat=application%2Fjson',
+        timezone='Europe/Berlin',
+        attribution_contributor='Stadt Karlsruhe',
+        attribution_license='Creative Commons Namensnennung - 4.0 International (CC-BY 4.0)',
+        attribution_url='http://creativecommons.org/licenses/by/4.0/',
+        has_realtime_data=True,
+    )
+
     def get_realtime_parking_sites(self) -> tuple[list[RealtimeParkingSiteInput], list[ImportParkingSiteException]]:
         feature_inputs, import_parking_site_exceptions = self._get_feature_inputs()
 
@@ -87,3 +93,23 @@ class KarlsruhePullConverter(PullConverter):
                 realtime_parking_site_inputs.append(realtime_parking_site_input)
 
         return realtime_parking_site_inputs, import_parking_site_exceptions
+
+
+class KarlsruheBikePullConverter(KarlsruheBasePullConverter):
+    karlsruhe_feature_validator = DataclassValidator(KarlsruheBikeFeatureInput)
+
+    source_info = SourceInfo(
+        uid='karlsruhe',
+        name='Stadt Karlsruhe: Fahrrad-Abstellanlagen',
+        public_url='https://web1.karlsruhe.de/service/Parken/',
+        source_url='https://mobil.trk.de:8443/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature'
+        '&typeName=TBA%3Aka_fahrradanlagen&outputFormat=application%2Fjson',
+        timezone='Europe/Berlin',
+        attribution_contributor='Stadt Karlsruhe',
+        attribution_license='Creative Commons Namensnennung - 4.0 International (CC-BY 4.0)',
+        attribution_url='http://creativecommons.org/licenses/by/4.0/',
+        has_realtime_data=False,
+    )
+
+    def get_realtime_parking_sites(self) -> tuple[list[RealtimeParkingSiteInput], list[ImportParkingSiteException]]:
+        return [], []

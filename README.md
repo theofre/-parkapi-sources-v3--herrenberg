@@ -17,7 +17,8 @@ We support following data sources:
 | Stadt Buchen                                                                      | car     | push (json) | `buchen`             | yes      |
 | Stadt Freiburg                                                                    | car     | pull        | `freiburg`           | yes      |
 | Stadt Heidelberg                                                                  | car     | pull        | `heidelberg`         | yes      |
-| Stadt Karlsruhe                                                                   | car     | pull        | `karlsruhe`          | yes      |
+| Stadt Karlsruhe: PKW-Parkplätze                                                   | car     | pull        | `karlsruhe`          | yes      |
+| Stadt Karlsruhe: Fahhrrad-Abstellangen                                            | bike    | pull        | `karlsruhe_bike`     | no       |
 | Kienzler                                                                          | bike    | pull        | `kienzler`           | yes      |
 | Stadt Mannheim                                                                    | car     | push (json) | `mannheim`           | yes      |
 | Stadt Neckarsulm: PKW-Parkplätze                                                  | car     | pull        | `neckarsulm`         | no       |
