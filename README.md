@@ -13,6 +13,7 @@ We support following data sources:
 | Barrierefreie Reisekette Baden-Württemberg: PKW-Parkplätze an Bushaltestellen     | car     | push (csv)  | `bfrk_bw_spnv_car`   | no       |
 | Barrierefreie Reisekette Baden-Württemberg: Fahrrad-Parkplätze an Bahnhöfen       | bike    | push (csv)  | `bfrk_bw_oepnv_bike` | no       |
 | Barrierefreie Reisekette Baden-Württemberg: Fahrrad-Parkplätze an Bushaltestellen | bike    | push (csv)  | `bfrk_bw_spnv_bike`  | no       |
+| Stadt Ellwangen                                                                   | car     | push (xlsx) | `ellwangen`          | no       |
 | Stadt Buchen                                                                      | car     | push (json) | `buchen`             | yes      |
 | Stadt Freiburg                                                                    | car     | pull        | `freiburg`           | yes      |
 | Stadt Heidelberg                                                                  | car     | pull        | `heidelberg`         | yes      |
@@ -29,7 +30,7 @@ We support following data sources:
 | Stadt Reutlingen: Fahrrad-Abstellanlagen                                          | bike    | push (csv)  | `reutlingen_bike`    | no       |
 | Stadt Stuttgart                                                                   | car     | push (json) | `stuttgart`          | yes      |
 | Stadt Ulm                                                                         | car     | pull        | `ulm`                | yes      |
-| Verband Region Stuttgart: Park and Ride                                           | car     | pull        | `vrs_p_r`            | yes      |
+| Verband Region Stuttgart: Park and Ride                                           | car     | push (xlsx) | `vrs_p_r`            | no       |
 
 New converters for new sources are always welcome, please have a look at "Contribute" below.
 
