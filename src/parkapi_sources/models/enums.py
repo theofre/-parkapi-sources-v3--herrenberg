@@ -28,11 +28,13 @@ class ParkingSiteType(Enum):
 
     # For bikes
     WALL_LOOPS = 'WALL_LOOPS'
+    SAFE_WALL_LOOPS = 'SAFE_WALL_LOOPS'
     STANDS = 'STANDS'
     LOCKERS = 'LOCKERS'
     SHED = 'SHED'
     TWO_TIER = 'TWO_TIER'
     BUILDING = 'BUILDING'
+    FLOOR = 'FLOOR'
 
     # For all
     OTHER = 'OTHER'

@@ -20,6 +20,7 @@ We support following data sources:
 | Stadt Karlsruhe: PKW-Parkplätze                                                   | car     | pull        | `karlsruhe`          | yes      |
 | Stadt Karlsruhe: Fahhrrad-Abstellangen                                            | bike    | pull        | `karlsruhe_bike`     | no       |
 | Kienzler                                                                          | bike    | pull        | `kienzler`           | yes      |
+| Stadt Konstanz: Fahrrad-Abstellanlagen                                            | bike    | push        | `konstanz_bike`      | no       |
 | Stadt Mannheim                                                                    | car     | push (json) | `mannheim`           | yes      |
 | Stadt Neckarsulm: PKW-Parkplätze                                                  | car     | pull        | `neckarsulm`         | no       |
 | Stadt Neckarsulm: Fahrrad-Abstellanlagen                                          | bike    | pull        | `neckarsulm_bike`    | no       |

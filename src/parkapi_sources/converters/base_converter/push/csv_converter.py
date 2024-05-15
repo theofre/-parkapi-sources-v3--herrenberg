@@ -14,11 +14,13 @@ from parkapi_sources.models import RealtimeParkingSiteInput, StaticParkingSiteIn
 
 
 class CsvConverter(PushConverter, ABC):
+    csv_delimiter = ';'
+
     def handle_csv_string(
         self,
         data: StringIO,
     ) -> tuple[list[StaticParkingSiteInput | RealtimeParkingSiteInput], list[ImportParkingSiteException]]:
-        return self.handle_csv(list(csv.reader(data, delimiter=';')))
+        return self.handle_csv(list(csv.reader(data, delimiter=self.csv_delimiter)))
 
     def get_mapping_by_header(self, header_row: dict[str, str], row: list[Any]) -> dict[str, int]:
         mapping: dict[str, int] = {}
