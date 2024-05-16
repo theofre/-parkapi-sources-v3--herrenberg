@@ -24,7 +24,6 @@ We support following data sources:
 | Stadt Mannheim                                                                    | car     | push (json) | `mannheim`           | yes      |
 | Stadt Neckarsulm: PKW-Parkplätze                                                  | car     | pull        | `neckarsulm`         | no       |
 | Stadt Neckarsulm: Fahrrad-Abstellanlagen                                          | bike    | pull        | `neckarsulm_bike`    | no       |
-| Stadt Karlsruhe                                                                   | car     | push (csv)  | `neckarsulm`         | no       |
 | Baden-Württemberg: Parken und Mitfahren                                           | car     | push (xlsx) | `pum_bw`             | no       |
 | RadVIS Baden-Württemberg (experimental)                                           | bike    | pull        | `radvis_bw`          | no       |
 | Parkraumgesellschaft Baden-Württemberg                                            | car     | pull        | `pbw`                | yes      |
