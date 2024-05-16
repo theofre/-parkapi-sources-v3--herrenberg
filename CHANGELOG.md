@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.4.2
+
+Released 2024-05-16
+
+### Fixes:
+
+* Fixes purpose to BIKE at RadVIS bike converter
+
+
 ## 0.4.1
 
 Released 2024-05-16

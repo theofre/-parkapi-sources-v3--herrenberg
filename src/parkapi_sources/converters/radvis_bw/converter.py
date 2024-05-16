@@ -53,13 +53,14 @@ class RadvisBwPullConverter(PullConverter):
                 if radvis_parking_site_input.properties.quell_system in sources_to_ignore:
                     continue
 
-                static_parking_site_inputs.append(
-                    radvis_parking_site_input.to_static_parking_site_input_with_proj(
-                        static_data_updated_at=datetime.now(tz=timezone.utc),
-                        proj=self.proj,
-                    ),
+                radvis_parking_site = radvis_parking_site_input.to_static_parking_site_input_with_proj(
+                    static_data_updated_at=datetime.now(tz=timezone.utc),
+                    proj=self.proj,
                 )
-                radvis_parking_site_input.purpose = PurposeType.BIKE
+
+                radvis_parking_site.purpose = PurposeType.BIKE
+                static_parking_site_inputs.append(radvis_parking_site)
+
             except ValidationError as e:
                 static_parking_site_errors.append(
                     ImportParkingSiteException(
