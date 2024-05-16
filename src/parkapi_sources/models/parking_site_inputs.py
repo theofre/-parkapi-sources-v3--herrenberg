@@ -5,6 +5,7 @@ Use of this source code is governed by an MIT-style license that can be found in
 
 from datetime import datetime, timezone
 from decimal import Decimal
+from typing import Optional
 
 from validataclass.dataclasses import Default, DefaultUnset, ValidataclassMixin, validataclass
 from validataclass.exceptions import DataclassPostValidationError, ValidationError
@@ -22,7 +23,7 @@ from validataclass.validators import (
     UrlValidator,
 )
 
-from .enums import ExternalIdentifierType, OpeningStatus, ParkAndRideType, ParkingSiteType, PurposeType
+from .enums import ExternalIdentifierType, OpeningStatus, ParkAndRideType, ParkingSiteType, PurposeType, SupervisionType
 
 
 @validataclass
@@ -58,8 +59,10 @@ class StaticParkingSiteInput(BaseParkingSiteInput):
         ),
         DefaultUnset,
     )
-    is_supervised: OptionalUnsetNone[bool] = Noneable(BooleanValidator()), DefaultUnset
+    supervision_type: OptionalUnsetNone[SupervisionType] = Noneable(EnumValidator(SupervisionType)), DefaultUnset
+    is_covered: OptionalUnsetNone[bool] = Noneable(BooleanValidator()), DefaultUnset
     photo_url: OptionalUnsetNone[str] = Noneable(UrlValidator(max_length=4096)), DefaultUnset
+    related_location: OptionalUnsetNone[str] = Noneable(StringValidator(max_length=256)), DefaultUnset
 
     has_realtime_data: OptionalUnsetNone[bool] = Noneable(BooleanValidator(), default=False), DefaultUnset
     static_data_updated_at: OptionalUnsetNone[datetime] = (
@@ -89,6 +92,13 @@ class StaticParkingSiteInput(BaseParkingSiteInput):
         Noneable(ListValidator(DataclassValidator(ExternalIdentifierInput))),
         DefaultUnset,
     )
+    tags: list[str] = ListValidator(StringValidator(min_length=1)), Default([])
+
+    @property
+    def is_supervised(self) -> Optional[bool]:
+        if self.supervision_type is None:
+            return None
+        return self.supervision_type in [SupervisionType.YES, SupervisionType.VIDEO, SupervisionType.ATTENDED]
 
     def __post_init__(self):
         if self.lat == 0 and self.lon == 0:

@@ -26,7 +26,8 @@ class ParkingSiteType(Enum):
     UNDERGROUND = 'UNDERGROUND'
     CAR_PARK = 'CAR_PARK'
 
-    # For bikes
+    # For bikes. See https://wiki.openstreetmap.org/wiki/Key:bicycle_parking for explanations.
+    GENERIC_BIKE = 'GENERIC_BIKE'
     WALL_LOOPS = 'WALL_LOOPS'
     SAFE_WALL_LOOPS = 'SAFE_WALL_LOOPS'
     STANDS = 'STANDS'
