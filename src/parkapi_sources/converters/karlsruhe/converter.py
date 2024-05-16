@@ -99,7 +99,7 @@ class KarlsruheBikePullConverter(KarlsruheBasePullConverter):
     karlsruhe_feature_validator = DataclassValidator(KarlsruheBikeFeatureInput)
 
     source_info = SourceInfo(
-        uid='karlsruhe',
+        uid='karlsruhe_bike',
         name='Stadt Karlsruhe: Fahrrad-Abstellanlagen',
         public_url='https://web1.karlsruhe.de/service/Parken/',
         source_url='https://mobil.trk.de:8443/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature'

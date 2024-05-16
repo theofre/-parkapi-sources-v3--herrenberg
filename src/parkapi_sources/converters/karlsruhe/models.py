@@ -26,7 +26,7 @@ from validataclass.validators import (
 
 from parkapi_sources.converters.base_converter.pull import GeojsonFeatureGeometryInput
 from parkapi_sources.models import RealtimeParkingSiteInput, StaticParkingSiteInput
-from parkapi_sources.models.enums import OpeningStatus, ParkingSiteType
+from parkapi_sources.models.enums import OpeningStatus, ParkingSiteType, PurposeType
 from parkapi_sources.validators import ParsedDateValidator
 
 
@@ -60,7 +60,7 @@ class KarlsruhePropertiesInput:
     betreiber_internet: Optional[str] = Noneable(UrlValidator())
     betreiber_email: Optional[str] = Noneable(EmailValidator())
     betreiber_telefon: Optional[str] = Noneable(StringValidator())
-    stand_parkhausdaten: date = ParsedDateValidator(date_format='%d.%m.%Y')
+    stand_parkhausdaten: date = ParsedDateValidator(date_format='%Y-%m-%dZ')
 
     def __post_init__(self):
         if self.max_durchfahrtshoehe == 0:  # 0 is used as None
@@ -154,4 +154,5 @@ class KarlsruheBikeFeatureInput:
             description=self.properties.bemerkung,
             static_data_updated_at=datetime.now(timezone.utc),
             type=self.properties.art.to_parking_site_type(),
+            purpose=PurposeType.BIKE,
         )
