@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.4.1
+
+Released 2024-05-16
+
+### Fixes:
+
+* Fixes purpose to BIKE at Konstanz, Karlsruhe and RadVIS bike converters
+* Fixes Karlsruhe bike converter uid
+* Fixes Karlsruhe converter because data source changed date format
+
+
 ## 0.4.0
 
 Released 2024-05-16

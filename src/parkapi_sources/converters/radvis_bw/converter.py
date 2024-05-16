@@ -13,6 +13,7 @@ from validataclass.validators import DataclassValidator
 from parkapi_sources.converters.base_converter.pull import GeojsonInput, PullConverter
 from parkapi_sources.exceptions import ImportParkingSiteException
 from parkapi_sources.models import RealtimeParkingSiteInput, SourceInfo, StaticParkingSiteInput
+from parkapi_sources.models.enums import PurposeType
 
 from .models import RadvisFeatureInput
 
@@ -58,6 +59,7 @@ class RadvisBwPullConverter(PullConverter):
                         proj=self.proj,
                     ),
                 )
+                radvis_parking_site_input.purpose = PurposeType.BIKE
             except ValidationError as e:
                 static_parking_site_errors.append(
                     ImportParkingSiteException(

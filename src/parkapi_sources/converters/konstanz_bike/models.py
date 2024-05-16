@@ -13,7 +13,7 @@ from validataclass.exceptions import ValidationError
 from validataclass.validators import EnumValidator, IntegerValidator, StringValidator
 
 from parkapi_sources.models import StaticParkingSiteInput
-from parkapi_sources.models.enums import ParkingSiteType
+from parkapi_sources.models.enums import ParkingSiteType, PurposeType
 from parkapi_sources.validators import ExcelNoneable
 from parkapi_sources.validators.boolean_validators import MappedBooleanValidator
 
@@ -80,4 +80,5 @@ class KonstanzRowInput:
             has_lighting=self.has_lighting,
             is_covered=self.is_covered,
             static_data_updated_at=datetime.now(tz=timezone.utc),
+            purpose=PurposeType.BIKE,
         )

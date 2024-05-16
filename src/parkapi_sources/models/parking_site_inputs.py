@@ -60,7 +60,6 @@ class StaticParkingSiteInput(BaseParkingSiteInput):
         DefaultUnset,
     )
     supervision_type: OptionalUnsetNone[SupervisionType] = Noneable(EnumValidator(SupervisionType)), DefaultUnset
-    is_covered: OptionalUnsetNone[bool] = Noneable(BooleanValidator()), DefaultUnset
     photo_url: OptionalUnsetNone[str] = Noneable(UrlValidator(max_length=4096)), DefaultUnset
     related_location: OptionalUnsetNone[str] = Noneable(StringValidator(max_length=256)), DefaultUnset
 
