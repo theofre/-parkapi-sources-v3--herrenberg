@@ -1,5 +1,15 @@
 # Changelog
 
+
+## 0.4.3
+
+Released 2024-05-29
+
+### Fixes:
+
+* [Fixes an issue with coordinates at XLSX base converter](https://github.com/ParkenDD/parkapi-sources-v3/actions/runs/9271045334)
+
+
 ## 0.4.2
 
 Released 2024-05-16
