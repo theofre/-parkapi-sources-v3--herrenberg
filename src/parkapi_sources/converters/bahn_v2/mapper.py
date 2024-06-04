@@ -20,7 +20,6 @@ class BahnMapper:
             lon=bahn_input.address.location.longitude,
             operator_name=bahn_input.operator.name,
             address=f'{bahn_input.address.streetAndNumber}, {bahn_input.address.zip} {bahn_input.address.city}',
-            capacity=bahn_input.capacity,
             type=bahn_input.type.name.to_parking_site_type_input(),
             has_realtime_data=False,  # TODO: change this as soon as Bahn offers proper rate limits
             static_data_updated_at=datetime.now(tz=timezone.utc),
@@ -30,6 +29,7 @@ class BahnMapper:
             static_parking_site_input.opening_hours = '24/7'
 
         for capacity_data in bahn_input.capacity:
+            # Because it was checked in validation, we can be sure that capacity will be set
             if capacity_data.type == BahnParkingSiteCapacityType.PARKING:
                 static_parking_site_input.capacity = int(round(capacity_data.total))
             elif capacity_data.type == BahnParkingSiteCapacityType.HANDICAPPED_PARKING:
