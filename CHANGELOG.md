@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.4.4
+
+Released 2024-06-04
+
+### Fixes:
+
+* [Fixes an issue with wrong koordinates at Karlsruhe](https://github.com/ParkenDD/parkapi-sources-v3/pull/48)
+* [Fixes an issue with Bahn data without capacity](https://github.com/ParkenDD/parkapi-sources-v3/pull/49)
+
 
 ## 0.4.3
 
@@ -7,7 +16,7 @@ Released 2024-05-29
 
 ### Fixes:
 
-* [Fixes an issue with coordinates at XLSX base converter](https://github.com/ParkenDD/parkapi-sources-v3/actions/runs/9271045334)
+* [Fixes an issue with coordinates at XLSX base converter](https://github.com/ParkenDD/parkapi-sources-v3/pull/45)
 
 
 ## 0.4.2
