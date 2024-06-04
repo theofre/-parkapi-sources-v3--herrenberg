@@ -8,6 +8,7 @@ from enum import Enum
 from typing import Optional
 
 from validataclass.dataclasses import Default, validataclass
+from validataclass.exceptions import ValidationError
 from validataclass.validators import (
     BooleanValidator,
     DataclassValidator,
@@ -115,7 +116,7 @@ class BahnRestrictionInput:
 class BahnAccessInput:
     openingHours: BahnOpeningHoursInput = DataclassValidator(BahnOpeningHoursInput)
     restrictions: BahnRestrictionInput = DataclassValidator(BahnRestrictionInput)
-    # TODO: ignored multible attributes which do not matter so far
+    # TODO: ignored multiple attributes which do not matter so far
 
 
 @validataclass
@@ -129,3 +130,10 @@ class BahnParkingSiteInput:
     capacity: list[BahnCapacityInput] = ListValidator(DataclassValidator(BahnCapacityInput))
     access: BahnAccessInput = DataclassValidator(BahnAccessInput)
     # TODO: ignored multible attributes which do not matter so far
+
+    def __post_init__(self):
+        for capacity in self.capacity:
+            if capacity.type == BahnParkingSiteCapacityType.PARKING:
+                return
+        # If no capacity with type PARKING was found, we miss the capacity and therefore throw a validation error
+        raise ValidationError(reason='Missing parking capacity')
