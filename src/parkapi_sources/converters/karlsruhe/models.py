@@ -8,7 +8,6 @@ from decimal import Decimal
 from enum import Enum
 from typing import Optional
 
-import pyproj
 from validataclass.dataclasses import DefaultUnset, validataclass
 from validataclass.helpers import OptionalUnset, UnsetValue
 from validataclass.validators import (
@@ -73,14 +72,12 @@ class KarlsruheFeatureInput:
     geometry: GeojsonFeatureGeometryInput = DataclassValidator(GeojsonFeatureGeometryInput)
     properties: KarlsruhePropertiesInput = DataclassValidator(KarlsruhePropertiesInput)
 
-    def to_static_parking_site_input(self, proj: pyproj.Proj) -> StaticParkingSiteInput:
-        coordinates = proj(float(self.geometry.coordinates[1]), float(self.geometry.coordinates[0]), inverse=True)
-
+    def to_static_parking_site_input(self) -> StaticParkingSiteInput:
         return StaticParkingSiteInput(
             uid=str(self.properties.id),
             name=self.properties.ph_name,
-            lat=coordinates[1],
-            lon=coordinates[0],
+            lat=self.geometry.coordinates[1],
+            lon=self.geometry.coordinates[0],
             address=f'{self.properties.parkhaus_strasse}, {self.properties.parkhaus_plz} {self.properties.parkhaus_gemeinde}',
             max_height=None if self.properties.max_durchfahrtshoehe is None else int(self.properties.max_durchfahrtshoehe * 100),
             public_url=self.properties.parkhaus_internet,
@@ -137,16 +134,14 @@ class KarlsruheBikeFeatureInput:
     geometry: GeojsonFeatureGeometryInput = DataclassValidator(GeojsonFeatureGeometryInput)
     properties: KarlsruheBikePropertiesInput = DataclassValidator(KarlsruheBikePropertiesInput)
 
-    def to_static_parking_site_input(self, proj: pyproj.Proj) -> StaticParkingSiteInput:
-        coordinates = proj(float(self.geometry.coordinates[1]), float(self.geometry.coordinates[0]), inverse=True)
-
+    def to_static_parking_site_input(self) -> StaticParkingSiteInput:
         address_fragments = [self.properties.standort, self.properties.stadtteil, self.properties.gemeinde]
         address = ', '.join([fragment for fragment in address_fragments if fragment is not UnsetValue])
         return StaticParkingSiteInput(
             uid=str(self.id),
             name=self.properties.standort,
-            lat=coordinates[1],
-            lon=coordinates[0],
+            lat=self.geometry.coordinates[1],
+            lon=self.geometry.coordinates[0],
             capacity=self.properties.stellplaetze,
             address=address,
             public_url=self.properties.link,

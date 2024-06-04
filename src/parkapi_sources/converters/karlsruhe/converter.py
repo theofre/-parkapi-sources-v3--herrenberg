@@ -6,7 +6,6 @@ Use of this source code is governed by an MIT-style license that can be found in
 from abc import ABC
 from pathlib import Path
 
-import pyproj
 import requests
 from validataclass.exceptions import ValidationError
 from validataclass.validators import DataclassValidator
@@ -19,7 +18,6 @@ from .models import KarlsruheBikeFeatureInput, KarlsruheFeatureInput
 
 
 class KarlsruheBasePullConverter(PullConverter, ABC):
-    proj: pyproj.Proj = pyproj.Proj(proj='utm', zone=32, ellps='WGS84', preserve_units=True)
     geojson_validator = DataclassValidator(GeojsonInput)
     karlsruhe_feature_validator: DataclassValidator
 
@@ -62,7 +60,7 @@ class KarlsruheBasePullConverter(PullConverter, ABC):
 
         static_parking_site_inputs: list[StaticParkingSiteInput] = []
         for feature_input in feature_inputs:
-            static_parking_site_inputs.append(feature_input.to_static_parking_site_input(self.proj))
+            static_parking_site_inputs.append(feature_input.to_static_parking_site_input())
 
         return static_parking_site_inputs, import_parking_site_exceptions
 
@@ -75,7 +73,7 @@ class KarlsruhePullConverter(KarlsruheBasePullConverter):
         name='Stadt Karlsruhe: PKW-Parkplätze',
         public_url='https://web1.karlsruhe.de/service/Parken/',
         source_url='https://mobil.trk.de:8443/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=TBA%3Aparkhaeuser'
-        '&outputFormat=application%2Fjson',
+        '&outputFormat=application%2Fjson&srsName=EPSG:4326',
         timezone='Europe/Berlin',
         attribution_contributor='Stadt Karlsruhe',
         attribution_license='Creative Commons Namensnennung - 4.0 International (CC-BY 4.0)',
@@ -103,7 +101,7 @@ class KarlsruheBikePullConverter(KarlsruheBasePullConverter):
         name='Stadt Karlsruhe: Fahrrad-Abstellanlagen',
         public_url='https://web1.karlsruhe.de/service/Parken/',
         source_url='https://mobil.trk.de:8443/geoserver/TBA/ows?service=WFS&version=1.0.0&request=GetFeature'
-        '&typeName=TBA%3Aka_fahrradanlagen&outputFormat=application%2Fjson',
+        '&typeName=TBA%3Aka_fahrradanlagen&outputFormat=application%2Fjson&srsName=EPSG:4326',
         timezone='Europe/Berlin',
         attribution_contributor='Stadt Karlsruhe',
         attribution_license='Creative Commons Namensnennung - 4.0 International (CC-BY 4.0)',
