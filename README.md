@@ -229,7 +229,7 @@ you can just define the static data method this way:
         return self._get_static_parking_site_inputs_and_exceptions(source_uid=self.source_info.uid)
 ```
 
-Afterwards, you can put the GeoJSON file to `/data`.
+The default location for GeoJSON files is a [separate repository](https://github.com/ParkenDD/parkapi-static-data).
 
 Please keep in mind that you will have to add tests for the migrated scraper.
 
