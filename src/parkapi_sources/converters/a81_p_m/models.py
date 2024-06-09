@@ -12,6 +12,7 @@ from validataclass.dataclasses import validataclass
 from validataclass.validators import DataclassValidator, EnumValidator, IntegerValidator, NumericValidator, StringValidator
 
 from parkapi_sources.models import RealtimeParkingSiteInput, StaticParkingSiteInput
+from parkapi_sources.models.enums import ParkAndRideType
 from parkapi_sources.validators import SpacedDateTimeValidator
 
 
@@ -45,13 +46,14 @@ class A81PMInput:
     id: str = StringValidator()
     long_name: str = StringValidator()
     name: str = StringValidator()
-    status: A81PMConnectionStatus = EnumValidator(A81PMConnectionStatus)
+    status: A81PMConnectionStatus = EnumValidator(A81PMConnectionStatus)  # TODO: what's that?
     time: datetime = SpacedDateTimeValidator(
         local_timezone=ZoneInfo('Europe/Berlin'),
         target_timezone=timezone.utc,
     )
     location: A81PMLocationInput = DataclassValidator(A81PMLocationInput)
     capacity: A81PMCapacityInput = DataclassValidator(A81PMCapacityInput)
+    category: A81PMCategory = EnumValidator(A81PMCategory)
     free_capacity: A81PMCapacityInput = DataclassValidator(A81PMCapacityInput)
 
     def to_static_parking_site(self) -> StaticParkingSiteInput:
@@ -65,6 +67,7 @@ class A81PMInput:
             capacity_woman=self.capacity.car_women,
             lat=self.location.lat,
             lon=self.location.lng,
+            park_and_ride_type=[ParkAndRideType.YES] if self.category == A81PMCategory.P_M else None,
         )
 
     def to_realtime_parking_site(self) -> RealtimeParkingSiteInput:
