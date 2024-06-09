@@ -8,7 +8,7 @@ from enum import Enum
 
 from validataclass.dataclasses import validataclass
 from validataclass.exceptions import ValidationError
-from validataclass.validators import StringValidator, IntegerValidator, EnumValidator
+from validataclass.validators import EnumValidator, IntegerValidator, StringValidator
 
 from parkapi_sources.models import RealtimeParkingSiteInput
 from parkapi_sources.models.enums import OpeningStatus
@@ -32,7 +32,7 @@ class BietigheimBissingenInput:
     OpeningState: BietigheimBissingenOpeningStatus = EnumValidator(BietigheimBissingenOpeningStatus)
     Capacity: int = IntegerValidator(allow_strings=True)
     OccupiedSites: int = IntegerValidator(allow_strings=True)
-    Timestamp: datetime = TimestampDateTimeValidator(allow_strings=True)
+    Timestamp: datetime = TimestampDateTimeValidator(allow_strings=True, divisor=1000)
 
     def __post_init__(self):
         if self.Capacity < self.OccupiedSites:

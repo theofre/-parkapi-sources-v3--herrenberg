@@ -15,7 +15,8 @@ from validataclass.validators import DataclassValidator
 
 from parkapi_sources.converters.base_converter.pull import PullConverter, StaticGeojsonDataMixin
 from parkapi_sources.exceptions import ImportParkingSiteException, ImportSourceException
-from parkapi_sources.models import SourceInfo, RealtimeParkingSiteInput, StaticParkingSiteInput
+from parkapi_sources.models import RealtimeParkingSiteInput, SourceInfo, StaticParkingSiteInput
+
 from .models import BietigheimBissingenInput
 
 
@@ -38,7 +39,7 @@ class BietigheimBissingenPullConverter(PullConverter, StaticGeojsonDataMixin):
         realtime_parking_site_inputs: list[RealtimeParkingSiteInput] = []
         import_parking_site_exceptions: list[ImportParkingSiteException] = []
 
-        for row_dict in self._get_data():
+        for row_dict in self._parse_csv(self._get_data()):
             try:
                 realtime_input = self.bietigheim_bissingen_realtime_update_validator.validate(row_dict)
             except ValidationError as e:
@@ -51,15 +52,11 @@ class BietigheimBissingenPullConverter(PullConverter, StaticGeojsonDataMixin):
                 )
                 continue
 
-            realtime_parking_site_inputs.append(
-                realtime_input.to_realtime_parking_site_input(
-                    realtime_data_updated_at=realtime_input.data.updated,
-                ),
-            )
+            realtime_parking_site_inputs.append(realtime_input.to_realtime_parking_site_input())
 
         return realtime_parking_site_inputs, import_parking_site_exceptions
 
-    def _get_data(self) -> list[dict]:
+    def _get_data(self) -> bytes:
         with IMAP4_SSL(self._imap_host) as imap_connection:
             imap_connection.login(
                 self.config_helper.get('PARK_API_BIETIGHEIM_BISSINGEN_USER'),
@@ -97,13 +94,13 @@ class BietigheimBissingenPullConverter(PullConverter, StaticGeojsonDataMixin):
         mail_envelope, mail_body = raw_message
         message: Message = email.message_from_bytes(mail_body, policy=policy.default.clone(linesep='\r\n'))
 
-        return self._parse_csv(self._get_csv_bytes_from_message(message))
+        return self._get_csv_bytes_from_message(message)
 
     @staticmethod
     def _parse_csv(csv_data: bytes) -> list[dict]:
         csv_rows = DictReader(StringIO(csv_data.decode('latin1')), delimiter=';')
 
-        return [row for row in csv_rows]  # type: ignore
+        return list(csv_rows)
 
     def _get_csv_bytes_from_message(self, message: Message) -> bytes:
         for message_part in message.walk():
