@@ -29,54 +29,44 @@ class A81PMPullConverter(PullConverter):
 
     def get_static_parking_sites(self) -> tuple[list[StaticParkingSiteInput], list[ImportParkingSiteException]]:
         static_parking_site_inputs: list[StaticParkingSiteInput] = []
-        static_parking_site_errors: list[ImportParkingSiteException] = []
 
-        parking_site_dicts = self.get_data()
+        a81_p_m_inputs, static_parking_site_errors = self._get_data()
 
-        for parking_site_dict in parking_site_dicts:
-            try:
-                parking_site_input: A81PMInput = self.a81_p_m_site_validator.validate(parking_site_dict)
-            except ValidationError as e:
-                static_parking_site_errors.append(
-                    ImportParkingSiteException(
-                        source_uid=self.source_info.uid,
-                        parking_site_uid=parking_site_dict.get('id'),
-                        message=f'validation error for static data {parking_site_dict}: {e.to_dict()}',
-                    ),
-                )
-                continue
-
-            static_parking_site_inputs.append(parking_site_input.to_static_parking_site())
+        for a81_p_m_input in a81_p_m_inputs:
+            static_parking_site_inputs.append(a81_p_m_input.to_static_parking_site())
 
         return static_parking_site_inputs, static_parking_site_errors
 
     def get_realtime_parking_sites(self) -> tuple[list[RealtimeParkingSiteInput], list[ImportParkingSiteException]]:
         realtime_parking_site_inputs: list[RealtimeParkingSiteInput] = []
-        realtime_parking_site_errors: list[ImportParkingSiteException] = []
 
-        parking_site_dicts = self.get_data()
+        a81_p_m_inputs, realtime_parking_site_errors = self._get_data()
 
-        for parking_site_dict in parking_site_dicts:
-            try:
-                parking_site_input: A81PMInput = self.a81_p_m_site_validator.validate(parking_site_dict)
-            except ValidationError as e:
-                realtime_parking_site_errors.append(
-                    ImportParkingSiteException(
-                        source_uid=self.source_info.uid,
-                        parking_site_uid=parking_site_dict.get('id'),
-                        message=f'validation error for realtime data {parking_site_dict}: {e.to_dict()}',
-                    ),
-                )
-                continue
-
-            realtime_parking_site_inputs.append(parking_site_input.to_realtime_parking_site())
+        for a81_p_m_input in a81_p_m_inputs:
+            realtime_parking_site_inputs.append(a81_p_m_input.to_realtime_parking_site())
 
         return realtime_parking_site_inputs, realtime_parking_site_errors
 
-    def get_data(self) -> list[dict]:
+    def _get_data(self) -> tuple[list[A81PMInput], list[ImportParkingSiteException]]:
+        a81_p_m_inputs: list[A81PMInput] = []
+        parking_site_errors: list[ImportParkingSiteException] = []
+
         response = requests.get(
             self.source_info.source_url,
             headers={'Authorization': f'Bearer {self.config_helper.get("PARK_API_A81_P_M_TOKEN")}'},
             timeout=60,
         )
-        return self.list_validator.validate(response.json())
+
+        for input_dict in self.list_validator.validate(response.json()):
+            try:
+                a81_p_m_inputs.append(self.a81_p_m_site_validator.validate(input_dict))
+            except ValidationError as e:
+                parking_site_errors.append(
+                    ImportParkingSiteException(
+                        source_uid=self.source_info.uid,
+                        parking_site_uid=input_dict.get('id'),
+                        message=f'validation error for static data {input_dict}: {e.to_dict()}',
+                    ),
+                )
+
+        return a81_p_m_inputs, parking_site_errors
