@@ -61,7 +61,7 @@ class HeidelbergPullConverter(PullConverter, StaticGeojsonDataMixin):
                     ImportParkingSiteException(
                         source_uid=self.source_info.uid,
                         parking_site_uid=update_dict.get('parkinglocation'),
-                        message=f'Invallid data at uid {update_dict.get("parkinglocation")}: {e.to_dict()}, ' f'data: {update_dict}',
+                        message=f'Invalid data at uid {update_dict.get("parkinglocation")}: {e.to_dict()}, ' f'data: {update_dict}',
                     ),
                 )
                 continue
