@@ -63,7 +63,7 @@ class BietigheimBissingenPullConverter(PullConverter, StaticGeojsonDataMixin):
                 self.config_helper.get('PARK_API_BIETIGHEIM_BISSINGEN_PASSWORD'),
             )
             # Select default mailbox and get latest message uid
-            select_status, message_uid_list = imap_connection.select()
+            _select_status, message_uid_list = imap_connection.select()
             if len(message_uid_list) == 0:
                 raise ImportSourceException(
                     source_uid=self.source_info.uid,
@@ -91,7 +91,7 @@ class BietigheimBissingenPullConverter(PullConverter, StaticGeojsonDataMixin):
             )
 
         # The raw message has an envelope and a body, we just need the body
-        mail_envelope, mail_body = raw_message
+        _mail_envelope, mail_body = raw_message
         message: Message = email.message_from_bytes(mail_body, policy=policy.default.clone(linesep='\r\n'))
 
         return self._get_csv_bytes_from_message(message)
