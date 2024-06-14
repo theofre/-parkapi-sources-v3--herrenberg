@@ -31,7 +31,6 @@ def bietigheim_bissingen_pull_converter(bietigheim_bissingen_config_helper: Mock
 class BietigheimBissingenPullConverterTest:
     @staticmethod
     def test_get_static_parking_sites(bietigheim_bissingen_pull_converter: BietigheimBissingenPullConverter):
-
         static_parking_site_inputs, import_parking_site_exceptions = bietigheim_bissingen_pull_converter.get_static_parking_sites()
 
         assert len(static_parking_site_inputs) > len(

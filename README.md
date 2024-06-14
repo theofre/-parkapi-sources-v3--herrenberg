@@ -237,22 +237,22 @@ Please keep in mind that you will have to add tests for the migrated scraper.
 
 ### Linting
 
-As we try to keep a consistent code style, please lint your code before creating the merge request. We use `black` and `ruff` for linting.
-There is Makefile target to do both: `make lint`. It runs the following commands:
+As we try to keep a consistent code style, please lint your code before creating the merge request. We use `ruff` for linting and 
+formatting. There is Makefile target to do both: `make lint`. It runs the following commands:
 
 ```bash
-black ./src ./tests
+ruff format ./src ./tests
 ruff check --fix ./src ./tests
 ```
 
-If you don't have `black` and `ruff` installed globally, you can create a virtual environment for these tools:
+If you don't have `ruff` installed globally, you can create a virtual environment for these tools:
 
 ```bash
 virtualenv venv
 source venv/bin/activate
 pip install -r requirements.txt -r requirements-dev.txt
 
-black ./src ./tests
+ruff format ./src ./tests
 ruff check --fix ./src ./tests
 ```
 
