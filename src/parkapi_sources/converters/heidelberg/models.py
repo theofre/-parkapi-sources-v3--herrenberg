@@ -131,6 +131,12 @@ class HeidelbergInput:
         else:
             opening_hours = f'{self.openingHours.isoformat()[:5]}-{self.closingHours.isoformat()[:5]}'
 
+        supervision_type: Optional[SupervisionType] = None
+        if HeidelbergFacilityType.STAFF in self.facilities:
+            supervision_type = SupervisionType.ATTENDED
+        elif HeidelbergFacilityType.SECURITY_CAMERA in self.facilities:
+            supervision_type = SupervisionType.VIDEO
+
         return StaticParkingSiteInput(
             uid=self.staticParkingSiteId,
             name=self.staticName,
@@ -150,8 +156,7 @@ class HeidelbergInput:
             static_data_updated_at=self.observationDateTime,
             type=parking_site_type,
             park_and_ride_type=[ParkAndRideType.YES] if self.parking_type == HeidelbergParkingSubType.PARK_AND_RIDE else None,
-            # TODO: Maybe STAFF means SupervisionType.ATTENDED?
-            supervision_type=SupervisionType.VIDEO if HeidelbergFacilityType.SECURITY_CAMERA in self.facilities else None,
+            supervision_type=supervision_type,
             has_realtime_data=self.availableSpotNumber is not None,
         )
 
