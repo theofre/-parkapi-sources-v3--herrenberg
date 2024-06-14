@@ -9,11 +9,9 @@ from validataclass.validators import Validator
 
 
 class RemoveValueDict(Validator):
-
     wrapped_validator: Validator
 
     def __init__(self, validator: Validator):
-
         # Check parameter validity
         if not isinstance(validator, Validator):
             raise TypeError('RemoveValueDict requires a Validator instance.')
