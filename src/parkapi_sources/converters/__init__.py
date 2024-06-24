@@ -27,3 +27,4 @@ from .stuttgart import StuttgartPushConverter
 from .ulm import UlmPullConverter
 from .vrs_p_r import VrsParkAndRidePushConverter
 from .herrenberg import HerrenbergPullConverter
+from .vrn import VrnBikePushConverter

@@ -1,0 +1,320 @@
+X,Y,id,filename,address,type_fac,capacity,fastening,environment,surface,has_covering,covering,cargo,has_charge,charge_capacity,public_access,pt_stop,data_source,foto
+8.62180555555556,49.6829722222222,"1",,Rodensteinstraße ggü. Nr. 2 (Ritterplatz),,"6",,,,,,,,,,,bensheim,
+8.62202777777778,49.6826666666667,"2",,Hauptstraße 2 (Targo-Bank),,"12",,,,,,,,,,,bensheim,
+8.622,49.6823611111111,"3",,Hauptstraße 5 (Modehaus Winkler),,"6",,,,,,,,,,,bensheim,
+8.62219444444444,49.6818055555556,"4",,Hauptstraße 17-19 (DM),,"8",,,,,,,,,,,bensheim,
+8.62236111111111,49.6813611111111,"5",,Hauptstraße 23,,"4",,,,,,,,,,,bensheim,
+8.62227777777778,49.6813055555556,"6",,Bahnhofstraße 1,,"6",,,,,,,,,,,bensheim,
+8.62136111111111,49.6811666666667,"7",,Bahnhofstraße 10,,"12",,,,,,,,,,,bensheim,
+8.62302777777778,49.6813055555556,"8",,Marktplatz 6,,"20",,,,,,,,,,,bensheim,
+8.6225,49.6809444444444,"9",,Hauptstraße 35 (Rossmann),,"6",,,,,,,,,,,bensheim,
+8.622,49.6798055555556,"10",,Hauptstraße 55 (Tourist-Info),,"8",,,,,,,,,,,bensheim,
+8.62122222222222,49.67925,"11",,Hauptstraße 75,,"8",,,,,,,,,,,bensheim,
+8.6215,49.6786111111111,"12",,Hauptstraße 87,,"30",,,,,,,,,,,bensheim,
+8.62061111111111,49.6800555555555,"13",,Am Rinnentor 24 (Mohacs-Platz),,"10",,,,,,,,,,,bensheim,
+8.62113888888889,49.68025,"14",,Beauner Platz 3 (Stadtbibliothek),,"8",,,,,,,,,,,bensheim,
+8.62113888888889,49.6804444444444,"15",,Am Wambolterhof 6,,"18",,,,,,,,,,,bensheim,
+8.62152777777778,49.6804166666667,"16",,Am Wambolterhof 4,,"10",,,,,,,,,,,bensheim,
+8.62108333333333,49.682,"17",,Am Bürgerhaus 35,,"14",,,,,,,,,,,bensheim,
+8.62011111111111,49.6823055555556,"18",,Promenadenstraße 25 (Parktheater),,"8",,,,,,,,,,,bensheim,
+8.61722222222222,49.6821111111111,"19",,Bahnhof Bensheim Busbahnhof (östlich Bahnlinie),,"14",,,,,,,,,,,bensheim,
+8.61719444444445,49.6816388888889,"20",,Bahnhof Bensheim Busbahnhof (östlich Bahnlinie),,"20",,,,,,,,,,,bensheim,
+8.61641666666667,49.6805833333333,"21",,Bahnhof Bensheim (westlich Bahnlinie),,"38",,,,,,,,,,,bensheim,
+8.71958597413106,49.4148342409597,"22",,Schlierbacher Landstraße,Anlehnbügel,"30",,,,true,,,,,,,heidelberg,
+8.71964076731372,49.4147511792165,"23",,Schlierbacher Landstraße,Anlehnbügel,"12",,,,true,,,,,,,heidelberg,
+8.67625832092503,49.4080274832293,"24",,Alfons-Beil-Platz,Anlehnbügel,"20",,,,true,,,,,,,heidelberg,
+8.68320141438647,49.4275777733803,"25",,Hans-Thoma-Platz,Anlehnbügel,"42",,,,true,,,,,,,heidelberg,
+8.67524248814554,49.3788524004968,"26",,Bürgerstraße,Anlehnbügel,"15",,,,true,,,,,,,heidelberg,
+8.67522274229042,49.3786961730511,"27",,Bürgerstraße,Anlehnbügel,"15",,,,true,,,,,,,heidelberg,
+8.64752424691175,49.3766748026264,"28",,Speyerer Straße,Anlehnbügel,"16",,,,true,,,,,,,heidelberg,
+8.67523892824552,49.3794762688097,"29",,Hardtstraße,Anlehnbügel,"25",,,,true,,,,,,,heidelberg,
+8.76208040018808,49.4150333733431,"30",,,Anlehnbügel,"30",,,,true,,,,,,,heidelberg,
+8.7426457405998,49.4156334282984,"31",,Schlierbacher Landstraße,Anlehnbügel,"14",,,,true,,,,,,,heidelberg,
+8.6890977759405,49.3982277681006,"32",,Rohrbacher Straße,Anlehnbügel,"48",,,,true,,,,,,,heidelberg,
+8.68892180537586,49.3984655636991,"33",,Rohrbacher Straße,Anlehnbügel,"22",,,,true,,,,,,,heidelberg,
+8.64113662880379,49.4120815301049,"34",,Kurpfalzring,Anlehnbügel,"14",,,,true,,,,,,,heidelberg,
+8.64579822627286,49.4241275545244,"35",,Neckarhäuser Straße,Anlehnbügel,"56",,,,true,,,,,,,heidelberg,
+8.64123604156164,49.4119602711844,"36",,Kurpfalzring,Anlehnbügel,"80",,,,true,,,,,,,heidelberg,
+8.74030491895952,49.4179359825418,"37",,In der Neckarhelle,Anlehnbügel,"16",,,,true,,,,,,,heidelberg,
+8.70534235889794,49.4127440262445,"38",,Marstallstraße,Anlehnbügel,"24",,,,false,,,,,,,heidelberg,
+8.70605994824602,49.4108943778381,"39",,Universitätplatz,Anlehnbügel,"36",,,,false,,,,,,,heidelberg,
+8.70608338389066,49.4096105641697,"40",,Plöck,Anlehnbügel,"102",,,,false,,,,,,,heidelberg,
+8.70420211703821,49.4100176657245,"41",,Theaterstr.,Anlehnbügel,"58",,,,false,,,,,,,heidelberg,
+8.70147986914062,49.4094337489942,"42",,Plöck,Anlehnbügel,"18",,,,false,,,,,,,heidelberg,
+8.70036969076835,49.4093531428311,"43",,Plöck,Anlehnbügel,"18",,,,false,,,,,,,heidelberg,
+8.71362388138356,49.4135631827125,"44",,Neckarmünzplatz,Anlehnbügel,"4",,,,false,,,,,,,heidelberg,
+8.71682352047004,49.4137393497571,"45",,Hauptstraße,Anlehnbügel,"20",,,,false,,,,,,,heidelberg,
+8.69885915194763,49.4119901755706,"46",,Stadthalle/Jubiläumsplatz,Anlehnbügel,"28",,,,false,,,,,,,heidelberg,
+8.70078313372061,49.4122345628131,"47",,Stadthalle/Montpellierplatz,Anlehnbügel,"10",,,,false,,,,,,,heidelberg,
+8.69383505000071,49.4090514775892,"48",,Sofienstraße,Anlehnbügel,"8",,,,false,,,,,,,heidelberg,
+8.69373577419751,49.4093165490644,"49",,Sofienstraße,Anlehnbügel,"8",,,,false,,,,,,,heidelberg,
+8.70394810705526,49.4101550078475,"50",,Theaterstraße,Anlehnbügel,"6",,,,false,,,,,,,heidelberg,
+8.7063710510296,49.4098727164975,"51",,Grabengasse,Anlehnbügel,"12",,,,false,,,,,,,heidelberg,
+8.71111243557256,49.4115839120239,"52",,Oberbadgasse,Anlehnbügel,"20",,,,false,,,,,,,heidelberg,
+8.69747082413955,49.4109412436848,"53",,Brunnengasse,Anlehnbügel,"36",,,,false,,,,,,,heidelberg,
+8.71138107482602,49.4124644906601,"54",,Heiliggeiststraße,Anlehnbügel,"16",,,,false,,,,,,,heidelberg,
+8.6662785311147,49.4010291145461,"55",,Rehovot Straße,Anlehnbügel,"8",,,,false,,,,,,,heidelberg,
+8.66804095792643,49.4001971030242,"56",,Cambridge Straße,Anlehnbügel,"8",,,,false,,,,,,,heidelberg,
+8.66973416347594,49.3993755169596,"57",,Montpellierstraße,Anlehnbügel,"8",,,,false,,,,,,,heidelberg,
+8.67030276972795,49.3997282780506,"58",,Montpellierstraße,Anlehnbügel,"8",,,,false,,,,,,,heidelberg,
+8.67149806857103,49.4014593970851,"59",,Zollhofgarten/Schiller University,Anlehnbügel,"10",,,,false,,,,,,,heidelberg,
+8.67008236798703,49.4017554038844,"60",,Zollhofgarten/Grünfläche,Anlehnbügel,"20",,,,false,,,,,,,heidelberg,
+8.66891835240909,49.402011555789,"61",,Zollhofgarten/Campus Viva,Anlehnbügel,"10",,,,false,,,,,,,heidelberg,
+8.68935616517481,49.4096437976125,"62",,Voßstraße,Anlehnbügel,"24",,,,false,,,,,,,heidelberg,
+8.69164516658512,49.4080995018222,"63",,Poststraße,Anlehnbügel,"32",,,,false,,,,,,,heidelberg,
+8.68442885222955,49.4070080626777,"64",,Römerstraße,Anlehnbügel,"6",,,,false,,,,,,,heidelberg,
+8.68444270659561,49.4068939449401,"65",,Römerstraße,Anlehnbügel,"6",,,,false,,,,,,,heidelberg,
+8.68446803423672,49.4066608096755,"66",,Römerstraße,Anlehnbügel,"12",,,,false,,,,,,,heidelberg,
+8.6854904485026,49.4061427216184,"67",,Kurfürsten-Anlage,Anlehnbügel,"26",,,,false,,,,,,,heidelberg,
+8.68906690935671,49.4075610471526,"68",,Poststraße,Anlehnbügel,"30",,,,false,,,,,,,heidelberg,
+8.68651916034268,49.4069660390683,"69",,Poststraße,Anlehnbügel,"16",,,,false,,,,,,,heidelberg,
+8.68611272063301,49.4068817147263,"70",,Poststraße,Anlehnbügel,"48",,,,false,,,,,,,heidelberg,
+8.68652948313119,49.4078258810393,"71",,Bergheimerstraße,Anlehnbügel,"12",,,,false,,,,,,,heidelberg,
+8.68723054653205,49.4087969904784,"72",,Thibautstraße,Anlehnbügel,"42",,,,false,,,,,,,heidelberg,
+8.67894713881819,49.4084059698458,"73",,Kirchstraße,Anlehnbügel,"22",,,,false,,,,,,,heidelberg,
+8.69262268246665,49.4094532968161,"74",,Bismarkstraße,Anlehnbügel,"18",,,,false,,,,,,,heidelberg,
+8.68808306877078,49.4079123415861,"75",,Poststraße,Anlehnbügel,"12",,,,false,,,,,,,heidelberg,
+8.68495221392622,49.406051504253,"76",,Kurfürsten-Anlage,Anlehnbügel,"4",,,,false,,,,,,,heidelberg,
+8.68119245495692,49.408891858505,"77",,Vangerowstraße,Anlehnbügel,"22",,,,false,,,,,,,heidelberg,
+8.68974411235556,49.4091408135921,"78",,Hospitalstraße,Anlehnbügel,"8",,,,false,,,,,,,heidelberg,
+8.68451332515672,49.4062270413954,"79",,Römerstraße,Anlehnbügel,"6",,,,false,,,,,,,heidelberg,
+8.69193981647677,49.4072694462099,"80",,Kurfürsten-Anlage,Anlehnbügel,"32",,,,false,,,,,,,heidelberg,
+8.70358632040715,49.3774262556972,"81",,Ginsterweg,Anlehnbügel,"8",,,,false,,,,,,,heidelberg,
+8.68769429823115,49.4281449386437,"82",,Erich-Hübner-Platz,Anlehnbügel,"8",,,,false,,,,,,,heidelberg,
+8.68339193770844,49.4261662828671,"83",,Rottmannstraße,Anlehnbügel,"12",,,,false,,,,,,,heidelberg,
+8.68615021817923,49.4250371881505,"84",,Rottmannstraße,Anlehnbügel,"14",,,,false,,,,,,,heidelberg,
+8.68627361072321,49.4251319701736,"85",,Rottmannstraße,Anlehnbügel,"12",,,,false,,,,,,,heidelberg,
+8.68733339886897,49.4245101846143,"86",,Rottmannstraße,Anlehnbügel,"8",,,,false,,,,,,,heidelberg,
+8.68604759720201,49.4274919696829,"87",,Dossenheimer Landstraße,Anlehnbügel,"14",,,,false,,,,,,,heidelberg,
+8.68507259657884,49.4287512765044,"88",,Bäumengasse,Anlehnbügel,"32",,,,false,,,,,,,heidelberg,
+8.68786320041973,49.4246046598544,"89",,Steubenstraße,Anlehnbügel,"16",,,,false,,,,,,,heidelberg,
+8.68387337234478,49.4279737537241,"90",,Dossenheimer Landstraße,Anlehnbügel,"6",,,,false,,,,,,,heidelberg,
+8.68747557016711,49.4280466174269,"91",,Dossenheimer Landstraße,Anlehnbügel,"4",,,,false,,,,,,,heidelberg,
+8.66624240280868,49.3771599233072,"92",,Hegenichstraße,Anlehnbügel,"30",,,,false,,,,,,,heidelberg,
+8.65892420736368,49.3758073960799,"93",,Cuzaring,Anlehnbügel,"8",,,,false,,,,,,,heidelberg,
+8.66939960402894,49.3790752701188,"94",,Odenwaldplatz,Anlehnbügel,"8",,,,false,,,,,,,heidelberg,
+8.67558987755188,49.3908952011159,"95",,Kirchheimer Weg,Anlehnbügel,"24",,,,false,,,,,,,heidelberg,
+8.67501934822236,49.3794349672034,"96",,Hardtstraße,Anlehnbügel,"10",,,,false,,,,,,,heidelberg,
+8.67491270493932,49.3794281099974,"97",,Hardtstraße,Anlehnbügel,"6",,,,false,,,,,,,heidelberg,
+8.66684202783027,49.388975962955,"98",,Harbigweg,Anlehnbügel,"32",,,,false,,,,,,,heidelberg,
+8.66757678972713,49.3899552888964,"99",,Harbigweg,Anlehnbügel,"34",,,,false,,,,,,,heidelberg,
+8.66669733535826,49.3902520035948,"100",,Harbigweg,Anlehnbügel,"30",,,,false,,,,,,,heidelberg,
+8.66644161685554,49.3775616684275,"101",,Schwetzinger Straße,Anlehnbügel,"6",,,,false,,,,,,,heidelberg,
+8.66413499726332,49.4150498028745,"102",,Tiergartenstraße,Anlehnbügel,"46",,,,false,,,,,,,heidelberg,
+8.6590193477458,49.4200680931408,"103",,Tiergartenstraße,Anlehnbügel,"406",,,,false,,,,,,,heidelberg,
+8.69194911362517,49.416635766644,"104",,Brückenstraße,Anlehnbügel,"6",,,,false,,,,,,,heidelberg,
+8.69193226852777,49.4168952090639,"105",,Brückenstraße,Anlehnbügel,"6",,,,false,,,,,,,heidelberg,
+8.69197650104978,49.4162647245337,"106",,Brückenstraße,Anlehnbügel,"6",,,,false,,,,,,,heidelberg,
+8.69214736338958,49.416013877653,"107",,Brückenstraße,Anlehnbügel,"6",,,,false,,,,,,,heidelberg,
+8.69222718970788,49.4148498960972,"108",,Brückenstraße,Anlehnbügel,"6",,,,false,,,,,,,heidelberg,
+8.69224245952795,49.414555377896,"109",,Brückenstraße,Anlehnbügel,"6",,,,false,,,,,,,heidelberg,
+8.69211596524404,49.4141587669862,"110",,Brückenstraße,Anlehnbügel,"6",,,,false,,,,,,,heidelberg,
+8.67789064208492,49.4169068882168,"111",,Mönchhofstraße,Anlehnbügel,"12",,,,false,,,,,,,heidelberg,
+8.67595110161609,49.419226573696,"112",,Berliner Straße,Anlehnbügel,"34",,,,false,,,,,,,heidelberg,
+8.67594067213656,49.4185280480803,"113",,Berliner Straße,Anlehnbügel,"32",,,,false,,,,,,,heidelberg,
+8.67593648117021,49.4190535502195,"114",,Berliner Straße,Anlehnbügel,"18",,,,false,,,,,,,heidelberg,
+8.6751077112784,49.4189867126819,"115",,Berliner Straße,Anlehnbügel,"54",,,,false,,,,,,,heidelberg,
+8.6751143129132,49.418531809963,"116",,Berliner Straße,Anlehnbügel,"30",,,,false,,,,,,,heidelberg,
+8.67516081074342,49.418111146258,"117",,Berliner Straße,Anlehnbügel,"20",,,,false,,,,,,,heidelberg,
+8.67515312680506,49.4173242434158,"118",,Im Neuenheimer Feld,Anlehnbügel,"28",,,,false,,,,,,,heidelberg,
+8.67595340815384,49.417255437417,"119",,Im Neuenheimer Feld,Anlehnbügel,"18",,,,false,,,,,,,heidelberg,
+8.69211389859598,49.416497107073,"120",,Brückenstraße,Anlehnbügel,"6",,,,false,,,,,,,heidelberg,
+8.69207144267903,49.4148296115313,"121",,Brückenstraße,Anlehnbügel,"6",,,,false,,,,,,,heidelberg,
+8.69226317459552,49.4142520860663,"122",,Brückenstraße,Anlehnbügel,"6",,,,false,,,,,,,heidelberg,
+8.67596662631987,49.4189376803746,"123",,Berliner Straße,Anlehnbügel,"36",,,,false,,,,,,,heidelberg,
+8.69229271240989,49.4151155215241,"124",,Rahmengasse,Anlehnbügel,"8",,,,false,,,,,,,heidelberg,
+8.6903510421252,49.4144895313679,"125",,Ladenburger Straße,Anlehnbügel,"16",,,,false,,,,,,,heidelberg,
+8.69018656092059,49.4150051512101,"126",,Lutherstraße,Anlehnbügel,"10",,,,false,,,,,,,heidelberg,
+8.69223476699222,49.3801241342591,"127",,Heidelberger Straße,Anlehnbügel,"26",,,,false,,,,,,,heidelberg,
+8.68495484057654,49.3670067941496,"128",,Hertzstraße,Anlehnbügel,"80",,,,false,,,,,,,heidelberg,
+8.6917955971177,49.379370187293,"129",,Seckenheimer Gässchen,Anlehnbügel,"4",,,,false,,,,,,,heidelberg,
+8.69171676219569,49.3788443517863,"130",,Amalienstraße,Anlehnbügel,"6",,,,false,,,,,,,heidelberg,
+8.69188373752003,49.3788992798867,"131",,Rathausstraße,Anlehnbügel,"6",,,,false,,,,,,,heidelberg,
+8.69053084806886,49.3833305447874,"132",,Karlsruher Straße,Anlehnbügel,"6",,,,false,,,,,,,heidelberg,
+8.68846960373661,49.3805798941365,"133",,Karlsruher Straße,Anlehnbügel,"8",,,,false,,,,,,,heidelberg,
+8.68766344272786,49.3803819779593,"134",,Rohrbach Markt,Anlehnbügel,"10",,,,false,,,,,,,heidelberg,
+8.68697066630442,49.3800920021135,"135",,Heinrich-Fuchs-Straße,Anlehnbügel,"10",,,,false,,,,,,,heidelberg,
+8.68696248888398,49.3802515340204,"136",,Rohrbach Markt,Anlehnbügel,"8",,,,false,,,,,,,heidelberg,
+8.68742099407323,49.3799406646209,"137",,Karlsruher Straße,Anlehnbügel,"6",,,,false,,,,,,,heidelberg,
+8.687151638381,49.3771257645345,"138",,Ortenauer Straße,Anlehnbügel,"22",,,,false,,,,,,,heidelberg,
+8.77050795623109,49.4112570516252,"139",,Im Hofert,Anlehnbügel,"8",,,,false,,,,,,,heidelberg,
+8.69176559291391,49.4025878567398,"140",,Rohrbacher Straße,Anlehnbügel,"8",,,,false,,,,,,,heidelberg,
+8.68532285022414,49.4018926476472,"141",,Zähringerstraße,Anlehnbügel,"20",,,,false,,,,,,,heidelberg,
+8.68808127837668,49.3990927612503,"142",,Franz-Knauff-Straße,Anlehnbügel,"22",,,,false,,,,,,,heidelberg,
+8.68898292959843,49.4058113657562,"143",,Bahnhofstraße,Anlehnbügel,"6",,,,false,,,,,,,heidelberg,
+8.68829975147951,49.4056916916174,"144",,Bahnhofstraße,Anlehnbügel,"4",,,,false,,,,,,,heidelberg,
+8.68840702524432,49.405603838723,"145",,Bahnhofstraße,Anlehnbügel,"18",,,,false,,,,,,,heidelberg,
+8.68715680089538,49.4052947317731,"146",,Kleinschmidtstraße,Anlehnbügel,"14",,,,false,,,,,,,heidelberg,
+8.68504294779251,49.4050421883563,"147",,Bahnhofstraße,Anlehnbügel,"10",,,,false,,,,,,,heidelberg,
+8.68476427598795,49.4050570892555,"148",,Bahnhofstraße,Anlehnbügel,"8",,,,false,,,,,,,heidelberg,
+8.68628652453882,49.405331475169,"149",,Bahnhofstraße,Anlehnbügel,"6",,,,false,,,,,,,heidelberg,
+8.6862372641133,49.4052291492856,"150",,Bahnhofstraße,Anlehnbügel,"14",,,,false,,,,,,,heidelberg,
+8.68722872283954,49.4054038288347,"151",,Bahnhofstraße,Anlehnbügel,"4",,,,false,,,,,,,heidelberg,
+8.68727832683519,49.4055131803169,"152",,Bahnhofstraße,Anlehnbügel,"4",,,,false,,,,,,,heidelberg,
+8.68747155923861,49.405445034912,"153",,Bahnhofstraße,Anlehnbügel,"6",,,,false,,,,,,,heidelberg,
+8.68806790637301,49.4055492691937,"154",,Bahnhofstraße,Anlehnbügel,"8",,,,false,,,,,,,heidelberg,
+8.68897333282614,49.405702716305,"155",,Bahnhofstraße,Anlehnbügel,"4",,,,false,,,,,,,heidelberg,
+8.68706209626021,49.4055518315119,"156",,Kleinschmidtstraße,Anlehnbügel,"6",,,,false,,,,,,,heidelberg,
+8.68717988208242,49.4060465784816,"157",,Kleinschmidtstraße,Anlehnbügel,"2",,,,false,,,,,,,heidelberg,
+8.68705885141484,49.4060493632557,"158",,Kleinschmidtstraße,Anlehnbügel,"4",,,,false,,,,,,,heidelberg,
+8.68706108355823,49.4052882482206,"159",,Kleinschmidtstraße,Anlehnbügel,"6",,,,false,,,,,,,heidelberg,
+8.68904079928066,49.4056340680089,"160",,Landhausstraße,Anlehnbügel,"6",,,,false,,,,,,,heidelberg,
+8.67529675624379,49.4048415547063,"161",,Willy-Brandt-Platz/Kurfürsten-Anlage,Anlehnbügel,"98",,,,false,,,,,,,heidelberg,
+8.67459536632242,49.4032317975913,"162",,Hauptbahnhof,Anlehnbügel,"126",,,,false,,,,,,,heidelberg,
+8.68618444611882,49.4034724975459,"163",,Kaiserstraße,Anlehnbügel,"8",,,,false,,,,,,,heidelberg,
+8.6882136317091,49.4035054127603,"164",,Kaiserstraße,Anlehnbügel,"40",,,,false,,,,,,,heidelberg,
+8.69236314467682,49.4062877346482,"165",,Bahnhofstraße,Anlehnbügel,"8",,,,false,,,,,,,heidelberg,
+8.68904626290951,49.4059061005403,"166",,Landhausstraße,Anlehnbügel,"10",,,,false,,,,,,,heidelberg,
+8.68889790825241,49.4062803792542,"167",,Landhausstraße,Anlehnbügel,"24",,,,false,,,,,,,heidelberg,
+8.68717533054611,49.4057736308388,"168",,Kleinschmidtstraße,Anlehnbügel,"8",,,,false,,,,,,,heidelberg,
+8.6811513947924,49.4047146467936,"169",,Kurfürsten-Anlage,Anlehnbügel,"8",,,,false,,,,,,,heidelberg,
+8.64877954803634,49.4240421015323,"170",,Mannheimer Straße,Anlehnbügel,"6",,,,false,,,,,,,heidelberg,
+8.64909853453489,49.4239092516142,"171",,Mannheimer Straße,Anlehnbügel,"8",,,,false,,,,,,,heidelberg,
+8.64785796045823,49.4255102654981,"172",,Mannheimer Straße,Anlehnbügel,"8",,,,false,,,,,,,heidelberg,
+8.75660771025965,49.4191216869681,"173",,Peterstaler Straße,Anlehnbügel,"16",,,,false,,,,,,,heidelberg,
+8.68892305083526,49.3660183956368,"174",,Karlsruher Straße,Fahrradboxen,"10",,,,false,,,,,,,heidelberg,
+8.67483380586685,49.4047663867602,"175",,Hauptbahnhof,Fahrradboxen,"13",,,,false,,,,,,,heidelberg,
+8.72769906531633,49.4183204486654,"176",,Hausackerweg,Gabelhalter,"7",,,,true,,,,,,,heidelberg,
+8.64592546339848,49.4235025592461,"177",,Adlerstraße,Gabelhalter,"21",,,,true,,,,,,,heidelberg,
+8.69345010766137,49.4100838297133,"178",,Sofienstraße,Gabelhalter,"123",,,,false,,,,,,,heidelberg,
+8.70114435359186,49.4093738481764,"179",,Plöck,Gabelhalter,"29",,,,false,,,,,,,heidelberg,
+8.70042266274741,49.409419645151,"180",,Plöck,Gabelhalter,"49",,,,false,,,,,,,heidelberg,
+8.71320515225703,49.4123362001443,"181",,Hauptstraße,Gabelhalter,"18",,,,false,,,,,,,heidelberg,
+8.69460169375644,49.4108703678391,"182",,Fahrtgasse,Gabelhalter,"30",,,,false,,,,,,,heidelberg,
+8.68062661709246,49.4088575732411,"183",,Vangerowstraße,Gabelhalter,"65",,,,false,,,,,,,heidelberg,
+8.67981407491046,49.4088581415748,"184",,Vangerowstraße,Gabelhalter,"36",,,,false,,,,,,,heidelberg,
+8.69357763398928,49.4086801569131,"185",,Plöck,Gabelhalter,"34",,,,false,,,,,,,heidelberg,
+8.69323406545033,49.4086208054535,"186",,Plöck,Gabelhalter,"9",,,,false,,,,,,,heidelberg,
+8.69272826897366,49.4099870435996,"187",,Bismarkstraße,Gabelhalter,"15",,,,false,,,,,,,heidelberg,
+8.70470139354495,49.3658454242974,"188",,"Im Emmertsgrund/Forum (Nahkauf, Apotheke)",Gabelhalter,"9",,,,false,,,,,,,heidelberg,
+8.68484171681935,49.4342378351255,"189",,Zum Steinberg,Gabelhalter,"17",,,,false,,,,,,,heidelberg,
+8.68603592909377,49.4276326642772,"190",,Dossenheimer Landstraße,Gabelhalter,"6",,,,false,,,,,,,heidelberg,
+8.66114657689067,49.4259395847081,"191",,Tiergartenstraße,Gabelhalter,"55",,,,false,,,,,,,heidelberg,
+8.65960746388573,49.3753727180204,"192",,Cuzaring,Gabelhalter,"11",,,,false,,,,,,,heidelberg,
+8.66514672795524,49.3880083272286,"193",,Harbigweg,Gabelhalter,"27",,,,false,,,,,,,heidelberg,
+8.66680359889544,49.3878957378349,"194",,Harbigweg,Gabelhalter,"85",,,,false,,,,,,,heidelberg,
+8.66986692923565,49.3916464664451,"195",,Harbigweg,Gabelhalter,"60",,,,false,,,,,,,heidelberg,
+8.69076021852027,49.4146607035684,"196",,Ladenburger Straße,Gabelhalter,"9",,,,false,,,,,,,heidelberg,
+8.68048264974087,49.4214153030673,"197",,Furtwänglerstraße,Gabelhalter,"12",,,,false,,,,,,,heidelberg,
+8.69312679713569,49.3779707535292,"198",,Leimer Straße,Gabelhalter,"3",,,,false,,,,,,,heidelberg,
+8.68832831002591,49.4044116088178,"199",,Blumenstraße,Gabelhalter,"10",,,,false,,,,,,,heidelberg,
+8.68692312838715,49.4044107720187,"200",,Blumenstraße,Gabelhalter,"7",,,,false,,,,,,,heidelberg,
+8.68257513660327,49.4038390864586,"201",,Hildastraße,Gabelhalter,"7",,,,false,,,,,,,heidelberg,
+8.67627022967977,49.4045684434631,"202",,Willy-Brandt-Platz,Gabelhalter,"506",,,,false,,,,,,,heidelberg,
+8.6865100491125,49.4006417703943,"203",,Schillerstraße,Gabelhalter,"7",,,,false,,,,,,,heidelberg,
+8.6940009572856,49.4055733349983,"204",,Gaisbergstraße,Anlehnbügel,"20",,,,false,,,,,,,heidelberg,
+8.69215862159119,49.4009923169943,"205",,Gaisbergstraße,Gabelhalter,"12",,,,false,,,,,,,heidelberg,
+8.64290610618604,49.4284547150326,"206",,Edinger Straße,Gabelhalter,"10",,,,false,,,,,,,heidelberg,
+8.64942462608384,49.4232859891028,"207",,Mannheimer Straße,Gabelhalter,"12",,,,false,,,,,,,heidelberg,
+8.6499348890033,49.4146745027654,"208",,Ludiwg-Guttmann-Straße,Gabelhalter,"40",,,,false,,,,,,,heidelberg,
+8.67652387975089,49.4081818250455,"209",,Alfons-Beil-Platz,Mobil,"12",,,,true,,,,,,,heidelberg,
+8.67663814036211,49.4196577644441,"210",,Berliner Straße,Mobil,"45",,,,true,,,,,,,heidelberg,
+8.6819485322149,49.4346294525517,"211",,Dossenheimer Landstraße,Mobil,"12",,,,true,,,,,,,heidelberg,
+8.67632369564586,49.4129873449799,"212",,Berliner Straße,Mobil,"20",,,,true,,,,,,,heidelberg,
+8.647099246236,49.4032726158024,"213",,Eppelheimer Straße,Mobil,"8",,,,true,,,,,,,heidelberg,
+8.68640913189775,49.4280059336241,"214",,Dossenheimer Landstraße,Anlehnbügel,"10",,,,false,,,,,,,heidelberg,
+8.64727787294989,49.4032238052173,"215",,Eppelheimer Straße,Mobil,"12",,,,true,,,,,,,heidelberg,
+8.64415117592833,49.4027623065113,"216",,Eppelheimer Straße,Mobil,"8",,,,true,,,,,,,heidelberg,
+8.64709341994035,49.4031816404668,"217",,Eppelheimer Straße,Mobil,"20",,,,true,,,,,,,heidelberg,
+8.68885430100334,49.3659083359171,"218",,Karlsruher Straße,Mobil,"16",,,,true,,,,,,,heidelberg,
+8.6881570437281,49.3735592813777,"219",,Karlsruher Straße,Mobil,"16",,,,true,,,,,,,heidelberg,
+8.77482948450642,49.4103181779154,"220",,Schlierbacher Landstraße,Mobil,"8",,,,true,,,,,,,heidelberg,
+8.69144407499697,49.3999799220296,"221",,Alois-Link-Platz,Mobil,"22",,,,true,,,,,,,heidelberg,
+8.67501539303852,49.4046102672495,"222",,Willy-Brandt-Platz,Mobil,"412",,,,true,,,,,,,heidelberg,
+8.70526396609754,49.4101589360309,"223",,Sandgasse,Mobil,"16",,,,false,,,,,,,heidelberg,
+8.70473812520135,49.4112080836227,"224",,Sandgasse,Mobil,"12",,,,false,,,,,,,heidelberg,
+8.70551067947736,49.4131120082438,"225",,Marstallstraße,Mobil,"36",,,,false,,,,,,,heidelberg,
+8.71884849758218,49.4146566072968,"226",,Schlierbacher Landstraße,Mobil,"30",,,,false,,,,,,,heidelberg,
+8.69401912998676,49.4080856413732,"227",,Sofienstraße,Mobil,"17",,,,false,,,,,,,heidelberg,
+8.69399695457989,49.4081935856209,"228",,Sofienstraße,Mobil,"13",,,,false,,,,,,,heidelberg,
+8.69394410299563,49.4082822893281,"229",,Sofienstraße,Mobil,"15",,,,false,,,,,,,heidelberg,
+8.69389028733209,49.4084107303533,"230",,Sofienstraße,Mobil,"7",,,,false,,,,,,,heidelberg,
+8.69383144497928,49.4085405612607,"231",,Sofienstraße,Mobil,"7",,,,false,,,,,,,heidelberg,
+8.7117859883358,49.4125492259562,"232",,Heiliggeiststraße,Mobil,"20",,,,false,,,,,,,heidelberg,
+8.69234638537534,49.4079109725403,"233",,Rohrbacher Straße,Mobil,"66",,,,false,,,,,,,heidelberg,
+8.67620798465216,49.4080579702605,"234",,Alfons-Beil-Platz,Mobil,"5",,,,false,,,,,,,heidelberg,
+8.69350198014967,49.4093247087106,"235",,Bismarkplatz,Mobil,"9",,,,false,,,,,,,heidelberg,
+8.6933833483283,49.4097334955666,"236",,Bismarkplatz,Mobil,"5",,,,false,,,,,,,heidelberg,
+8.69320306694682,49.4096886000958,"237",,Bismarkplatz,Mobil,"18",,,,false,,,,,,,heidelberg,
+8.68797855498641,49.4081510926874,"238",,Bergheimer Straße,Mobil,"18",,,,false,,,,,,,heidelberg,
+8.68751273508743,49.407314694123,"239",,Poststraße,Mobil,"12",,,,false,,,,,,,heidelberg,
+8.69018192396999,49.3824905802267,"240",,Karlsruher Straße,Anlehnbügel,"20",,,,false,,,,,,,heidelberg,
+8.68726679393864,49.4072573427262,"241",,Poststraße,Mobil,"12",,,,false,,,,,,,heidelberg,
+8.68085148468019,49.4079616626184,"242",,Bergheimer Straße,Mobil,"11",,,,false,,,,,,,heidelberg,
+8.66392679175819,49.4100069369681,"243",,Mannheimer Straße,Mobil,"7",,,,false,,,,,,,heidelberg,
+8.68794814501301,49.424428398752,"244",,Steubenstraße / Kapellenweg,Mobil,"8",,,,false,,,,,,,heidelberg,
+8.69134849848618,49.4132978255175,"245",,Uferstraße,Mobil,"15",,,,false,,,,,,,heidelberg,
+8.431822,49.317519,"3464",,,lp,"10",,,,false,,false,false,"0",true,true,erhebung_speyer,FAA_Speyer_150.jpg
+8.432965,49.31744,"3465",,,st,"8",,,,false,,false,false,"0",true,false,erhebung_speyer,FAA_Speyer_151.jpg
+8.433684,49.317001,"3466",,,lp,"7",,,,false,,false,false,"0",true,false,erhebung_speyer,FAA_Speyer_152.jpg
+8.433825,49.316853,"3467",,,lp,"6",,,,false,,false,false,"0",true,false,erhebung_speyer,FAA_Speyer_153.jpg
+8.433119,49.317426,"3468",,,st,"3",,,,false,,false,false,"0",true,false,erhebung_speyer,FAA_Speyer_154.jpg
+8.434145,49.317293,"3469",,,lp,"35",,,,false,,false,false,"0",true,false,erhebung_speyer,FAA_Speyer_155.jpg
+8.434708,49.317496,"3470",,,st,"5",,,,false,,false,false,"0",true,false,erhebung_speyer,FAA_Speyer_156.jpg
+8.43517,49.317481,"3471",,,st,"4",,,,false,,false,false,"0",true,false,erhebung_speyer,FAA_Speyer_157.jpg
+8.435217,49.31775,"3472",,,lp,"6",,,,false,,false,false,"0",true,false,erhebung_speyer,FAA_Speyer_158.jpg
+8.434213,49.317718,"3473",,,lp,"9",,,,false,,false,false,"0",true,false,erhebung_speyer,FAA_Speyer_159.jpg
+8.433771,49.317909,"3474",,,st,"4",,,,false,,false,false,"0",true,false,erhebung_speyer,FAA_Speyer_160.jpg
+8.433714,49.318028,"3475",,,st,"5",,,,false,,false,false,"0",true,false,erhebung_speyer,FAA_Speyer_161.jpg
+8.433677,49.318149,"3476",,,st,"7",,,,false,,false,false,"0",true,false,erhebung_speyer,
+8.433625,49.318239,"3477",,,st,"2",,,,false,,false,false,"0",true,false,erhebung_speyer,
+8.432991,49.31809,"3478",,,lp,"5",,,,false,,false,false,"0",true,false,erhebung_speyer,
+8.432314,49.317988,"3479",,,st,"5",,,,false,,false,false,"0",true,false,erhebung_speyer,
+8.565705,49.528245,"3480",,,lp,"34",,,,false,,false,false,"0",true,true,erhebung_viernheim,FAA_Viernheim_001.jpg
+8.563554,49.527186,"3481",,,st,"20",,,,false,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_002.jpg
+8.565041,49.527448,"3482",,,st,"92",,,,true,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_003.jpg
+8.566586,49.527954,"3483",,,lp,"45",,,,false,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_004.jpg
+8.566833,49.527257,"3484",,,st,"50",,,,false,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_005.jpg
+8.567003,49.527351,"3485",,,st,"14",,,,false,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_006.jpg
+8.565743,49.525782,"3486",,,st,"10",,,,false,,false,false,"0",true,false,erhebung_viernheim,
+8.571771,49.527376,"3487",,,lp,"8",,,,false,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_008.jpg
+8.573877,49.528504,"3488",,,lp,"6",,,,false,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_009.jpg
+8.574421,49.530242,"3489",,,rc,"14",,,,false,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_010.jpg
+8.575098,49.530653,"3490",,,lp,"4",,,,false,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_011.jpg
+8.575664,49.530845,"3491",,,lp,"5",,,,false,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_012.jpg
+8.576193,49.530758,"3492",,,lp,"4",,,,false,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_013.jpg
+8.576343,49.530753,"3493",,,lp,"5",,,,false,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_014.jpg
+8.582035,49.535424,"3494",,,st,"200",,,,true,,false,false,"0",true,true,erhebung_viernheim,FAA_Viernheim_015.jpg
+8.582947,49.536006,"3495",,,lp,"8",,,,false,,false,false,"0",true,true,erhebung_viernheim,FAA_Viernheim_016.jpg
+8.588655,49.539591,"3496",,,lp,"14",,,,false,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_017.jpg
+8.589767,49.541567,"3497",,,lp,"20",,,,false,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_018.jpg
+8.591219,49.542847,"3498",,,lp,"12",,,,false,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_019.jpg
+8.583211,49.544335,"3499",,,lp,"12",,,,true,,false,false,"0",true,true,erhebung_viernheim,FAA_Viernheim_020.jpg
+8.583439,49.551229,"3500",,,lp,"24",,,,false,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_021.jpg
+8.583955,49.551949,"3501",,,rc,"80",,,,false,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_022.jpg
+8.581155,49.55105,"3502",,,lp,"15",,,,false,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_023.jpg
+8.576065,49.545628,"3503",,,lp,"14",,,,false,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_024.jpg
+8.567932,49.545837,"3504",,,lp,"15",,,,false,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_025.jpg
+8.578452,49.538364,"3505",,,st,"39",,,,true,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_026.jpg
+8.577917,49.538332,"3506",,,st,"7",,,,true,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_027.jpg
+8.577377,49.538314,"3507",,,st,"7",,,,false,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_028.jpg
+8.576717,49.538531,"3508",,,st,"8",,,,false,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_029.jpg
+8.577249,49.538368,"3509",,,st,"14",,,,false,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_030.jpg
+8.577928,49.537921,"3510",,,lp,"6",,,,false,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_031.jpg
+8.578312,49.537671,"3511",,,st,"8",,,,false,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_032.jpg
+8.579211,49.537885,"3512",,,st,"8",,,,false,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_033.jpg
+8.579472,49.538129,"3513",,,st,"10",,,,false,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_034.jpg
+8.579713,49.538446,"3514",,,st,"7",,,,false,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_034.jpg
+8.579877,49.538632,"3515",,,st,"7",,,,false,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_034.jpg
+8.58004,49.538836,"3516",,,st,"6",,,,false,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_034.jpg
+8.58024,49.539037,"3517",,,st,"4",,,,false,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_034.jpg
+8.580611,49.53922,"3518",,,st,"4",,,,false,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_034.jpg
+8.580921,49.539221,"3519",,,st,"11",,,,false,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_034.jpg
+8.581305,49.539298,"3520",,,st,"11",,,,false,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_034.jpg
+8.581615,49.539399,"3521",,,st,"3",,,,false,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_034.jpg
+8.580867,49.537569,"3522",,,st,"7",,,,false,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_043.jpg
+8.580524,49.537685,"3523",,,st,"13",,,,false,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_044.jpg
+8.580096,49.537732,"3524",,,st,"8",,,,false,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_045.jpg
+8.579833,49.537817,"3525",,,st,"4",,,,false,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_045.jpg
+8.579607,49.537902,"3526",,,st,"10",,,,false,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_045.jpg
+8.579232,49.537806,"3527",,,st,"4",,,,false,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_045.jpg
+8.579091,49.537667,"3528",,,st,"7",,,,false,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_045.jpg
+8.57899,49.537594,"3529",,,st,"5",,,,false,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_045.jpg
+8.578862,49.537463,"3530",,,st,"11",,,,false,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_045.jpg
+8.578761,49.537264,"3531",,,st,"4",,,,false,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_045.jpg
+8.578683,49.537136,"3532",,,st,"8",,,,false,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_053.jpg
+8.578533,49.536933,"3533",,,st,"4",,,,false,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_054.jpg
+8.575078,49.535972,"3534",,,lp,"9",,,,true,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_055.jpg
+8.569302,49.53632,"3535",,,st,"26",,,,false,,false,false,"0",true,true,erhebung_viernheim,FAA_Viernheim_056.jpg
+8.566491,49.534424,"3536",,,lp,"30",,,,false,,false,false,"0",true,false,erhebung_viernheim,
+8.554353,49.537456,"3537",,,lp,"24",,,,false,,false,false,"0",true,false,erhebung_viernheim,FAA_Viernheim_058.jpg

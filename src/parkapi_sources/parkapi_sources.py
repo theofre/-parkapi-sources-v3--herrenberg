@@ -35,6 +35,7 @@ from .converters import (
     StuttgartPushConverter,
     UlmPullConverter,
     VrsParkAndRidePushConverter,
+    VrnBikePushConverter,
 )
 from .converters.base_converter.pull import PullConverter
 from .converters.base_converter.push import PushConverter
@@ -72,6 +73,7 @@ class ParkAPISources:
         StuttgartPushConverter,
         UlmPullConverter,
         VrsParkAndRidePushConverter,
+        VrnBikePushConverter,
     ]
     config_helper: ConfigHelper
     converter_by_uid: dict[str, BaseConverter]
