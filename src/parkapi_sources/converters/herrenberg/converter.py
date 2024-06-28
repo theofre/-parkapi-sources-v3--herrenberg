@@ -23,7 +23,7 @@ class HerrenbergPullConverter(BaseConverter):
         uid='herrenberg',
         name='Stadt Herrenberg',
         public_url='https://www.herrenberg.de/de/Stadtleben/Erlebnis-Herrenberg/Service/Parkplaetze',
-        source_url='/home/jebus/Arbeit/parkapi-sources-v3-t/tests/converters/data/herrenberg.json',
+        source_url='https://api.stadtnavi.de/herrenberg/parking/parkapi.json',
         timezone='Europe/Berlin',
         attribution_contributor='Stadt Herrenberg',
         has_realtime_data=False,
