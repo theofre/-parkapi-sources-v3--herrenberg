@@ -23,6 +23,8 @@ class VrnBikePushConverter(CsvConverter):
         name='VRN : Fahradstellplätze',
         public_url='https://www.vrn.de/opendata/datasets/fahrradabstellanlagen',
         has_realtime_data=False,
+        attribution_license='DL-DE->BY-2.0',
+        attribution_url='https://www.govdata.de/dl-de/by-2-0'
     )
 
     header_mapping: dict[str, str] = {
