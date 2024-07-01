@@ -34,6 +34,7 @@ class VrnBikePushConverter(CsvConverter):
         'X': 'lon',
         'Y': 'lat',
         'data_source': 'stadt',
+        'has_covering': 'is_covered',
 
     }
 
